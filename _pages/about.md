@@ -2,16 +2,12 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='#'>延边大学</a>. 延吉 吉林. 121442175@ybu.edu.cn
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
@@ -19,9 +15,6 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+您好！很荣幸您能访问我的主页。我是一个心理学学生，但兴趣和技能并不局限于心理学。这个网页的存在是为了汇总我的研究和想法，可能还会有学习笔记，以及各种奇奇怪怪的东西。它们大多是来源于课程作业和日常的思考。我对比较软的人文学科问题更有兴趣，但方法上更偏爱自然科学的硬方法。我相信知识并不只是为了得到客观真实的规律，也不只是为了对社会有用。知识的增长应该确证人的能力。对于任何人，知识都应该让他们有所体验和反思，过更好的生活。
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-一段描述。
-
+“古人之观于天地、山川、草木、虫鱼、鸟兽，往往有得，以其求思之深而无不在也。夫夷以近，则游者众；险以远，则至者少。而世之奇伟、瑰怪，非常之观，常在于险远，而人之所罕至焉，故非有志者不能至也。”
