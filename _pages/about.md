@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>延边大学 </a>. 延吉 吉林
+subtitle: <a href='#'>延边大学 </a>. 延吉 吉林. tanhaoyuan3456@163.com
 
 profile:
   align: right
