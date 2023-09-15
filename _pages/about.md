@@ -6,7 +6,7 @@ subtitle: <a href='#'>延边大学 </a>. 延吉 吉林. tanhaoyuan3456@163.com
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: 先不用prof_pic.jpg
   image_circular: false # crops the image to make it circular
 
 news: true  # includes a list of news items
