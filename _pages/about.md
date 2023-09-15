@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>延边大学</a>. 延吉 吉林. 121442175@ybu.edu.cn
+subtitle: <a href='#'>延边大学 </a>. 延吉 吉林
 
 profile:
   align: right
