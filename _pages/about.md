@@ -6,7 +6,7 @@ subtitle: <a href='#'>延边大学 </a>. 延吉 吉林. tanhaoyuan3456@163.com
 
 profile:
   align: right
-  image: 先不用prof_pic.jpg
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
 
 news: true  # includes a list of news items
@@ -19,4 +19,4 @@ social: true  # includes social icons at the bottom of the page
 
 我相信知识并不只是为了得到客观真实的规律，也不只是为了对社会有用。知识的增长应该确证人的能力。对于任何人，知识都应该让他们有所体验和反思，过更好的生活。
 
-“谁会上方语，嗒然释所疑。所疑照室白，生命聊坚持。”  ------嘘堂
+“所疑照室白，生命聊坚持。”  ------嘘堂
