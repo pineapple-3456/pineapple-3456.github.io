@@ -12,7 +12,7 @@ profile:
 news: false  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: false  # includes social icons at the bottom of the page
 ---
 
 您好！很荣幸您能访问我的主页。我是一个心理学学生，但兴趣和技能并不局限于心理学。这个网页的存在是为了汇总我的研究和想法，可能还会有学习笔记，以及各种奇奇怪怪的东西。它们大多是来源于课程作业和日常的思考。
