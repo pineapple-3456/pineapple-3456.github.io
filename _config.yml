@@ -162,10 +162,12 @@ disqus_shortname: al-folio # put your disqus shortname
 external_sources:
   - name: zhuanlan.zhihu.com
     rss_url: https://zhuanlan.zhihu.com/p/504473111
-
+    
+external_sources:
   - name: zhuanlan.zhihu.com
     rss_url: https://zhuanlan.zhihu.com/p/507834880
-
+    
+external_sources:
   - name: zhuanlan.zhihu.com
     rss_url: https://zhuanlan.zhihu.com/p/600592717
 
