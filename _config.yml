@@ -160,8 +160,14 @@ disqus_shortname: al-folio # put your disqus shortname
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
+  - name: 知乎文章
+    rss_url: https://zhuanlan.zhihu.com/p/504473111
+
+  - name: 知乎文章
+    rss_url: https://zhuanlan.zhihu.com/p/507834880
+
+  - name: 知乎文章
+    rss_url: https://zhuanlan.zhihu.com/p/600592717
 
 # -----------------------------------------------------------------------------
 # Collections
