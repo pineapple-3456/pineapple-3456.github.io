@@ -161,7 +161,7 @@ disqus_shortname: al-folio # put your disqus shortname
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
   - name: zhihu.com
-    rss_url: https://rsshub.app/zhihu/xhu/zhuanlan/c_1496795582085296128
+    rss_url: https://rss.lilydjwg.me/zhihuzhuanlan/c_1496795582085296128?digest=false
 
 
 # -----------------------------------------------------------------------------
