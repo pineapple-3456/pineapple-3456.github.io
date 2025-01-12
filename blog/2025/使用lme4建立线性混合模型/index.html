@@ -69,14 +69,14 @@ ses -0.046
 2       id         ses &lt;NA&gt;  0.3983228  0.6311282
 3       id (Intercept)  ses -0.1558678 -0.1128990
 4 Residual        &lt;NA&gt; &lt;NA&gt; 36.8315554  6.0689007
-</code></pre></div></div> <p>其中 vcov 列为方差和协方差。结果表明，残差方差 \(\sigma^2\) 为 36.8315554，随机效应协方差阵为：</p> \[\begin{align} \left.\mathrm{Var}\left[ \begin{array} {c}u_{0j} \\ \\ u_{1j} \end{array}\right.\right]= \begin{bmatrix} \tau_{00} &amp; \tau_{01} \\ \\ \tau_{10} &amp; \tau_{11} \end{bmatrix}= \begin{bmatrix} 4.7851695 &amp; -0.1558678 \\ \\ -0.1558678 &amp; 0.3983228 \end{bmatrix} \end{align}\] <p>这些方差成分可以用来计算随机效应的相关系数和各层变量的方差解释率。</p> <p><strong>随机效应的相关系数</strong> 当模型中有多个层2随机效应时，可以通过随机效应的协方差阵计算各随机效应之间的相关。例如上面的模型中包含两个层2随机效应 \(u_{0j}\) 和 \(u_{1j}\) ，他们的相关系数为：</p> \[\begin{align} ρ(u_{0j}​,u_{1j​}) = \tau_{01}/\sqrt{\tau_{00}\tau_{11}} \end{align}\] <p>summary( ) 中直接给出了相关系数为 -0.11，使用上面的方差成分也可以算出一样的结果。考察随机效应的相关是非常重要的，如果两个随机效应具有非常高的相关，表明两个系数的学校间差异可能有共同的原因，这时可以根据理论假设将其中一个系数设置为固定来简化模型。</p> <p><strong>新纳入层1变量的方差解释率</strong> 层1加入预测变量ses后，残差方差 \(\sigma^2\) 由39.148400变为36.8315561，可以计算层1预测变量的方差解释率：</p> \[\begin{align} R^2_{ses} = (\sigma^2_{null}-\sigma^2_{ses})/\sigma^2_{null} \end{align}\] <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sigma2_ses &lt;-  #提取随机斜率模型的残差方差
+</code></pre></div></div> <p>其中 vcov 列为方差和协方差。结果表明，残差方差 \(\sigma^2\) 为 36.8315554，随机效应协方差阵为：</p> \[\begin{align} \left.\mathrm{Var}\left[ \begin{array} {c}u_{0j} \\ \\ u_{1j} \end{array}\right.\right]= \begin{bmatrix} \tau_{00} &amp; \tau_{01} \\ \\ \tau_{10} &amp; \tau_{11} \end{bmatrix}= \begin{bmatrix} 4.7851695 &amp; -0.1558678 \\ \\ -0.1558678 &amp; 0.3983228 \end{bmatrix} \end{align}\] <p>这些方差成分可以用来计算随机效应的相关系数和各层变量的方差解释率。</p> <p><strong>随机效应的相关系数</strong> 当模型中有多个层2随机效应时，可以通过随机效应的协方差阵计算各随机效应之间的相关。例如上面的模型中包含两个层2随机效应 \(u_{0j}\) 和 \(u_{1j}\) ，他们的相关系数为：</p> \[\begin{align} ρ(u_{0j}​,u_{1j​}) = \tau_{01}/\sqrt{\tau_{00}\tau_{11}} \end{align}\] <p>summary( ) 中直接给出了相关系数为 -0.11，使用上面的方差成分也可以算出一样的结果。考察随机效应的相关是非常重要的，如果两个随机效应具有非常高的相关，表明两个系数的学校间差异可能有共同的原因，这时可以根据理论假设将其中一个系数设置为固定来简化模型。</p> <p><strong>新纳入层1变量的方差解释率</strong> 层1加入预测变量ses后，残差方差 \(\sigma^2\) 由39.148变为36.8316，可以计算层1预测变量的方差解释率：</p> \[\begin{align} R^2_{ses} = (\sigma^2_{null}-\sigma^2_{ses})/\sigma^2_{null} \end{align}\] <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sigma2_ses &lt;-  #提取随机斜率模型的残差方差
   as.data.frame(VarCorr(lmm_random_coef))[as.data.frame(VarCorr(lmm_random_coef))$grp == 'Residual', 'vcov'] 
 sigma2_null &lt;-  #提取零模型的残差方差
   as.data.frame(VarCorr(lmm_null))[as.data.frame(VarCorr(lmm_null))$grp == 'Residual', 'vcov'] 
 R2 = (sigma2_null - sigma2_ses)/sigma2_null  #计算R^2
 R2
 </code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 0.05918107
-</code></pre></div></div> <p>表明加入ses后，模型解释的方差增加了5.918107%。</p> <p><strong>模型的对数似然</strong> 另一种判断新纳入变量是否有效的方法是比较模型的对数似然LL。-2LL渐进服从卡方分布，可以进行似然比卡方检验，从而得到p值来辅助判断。但需要注意：(1) 必须使用完全极大似然估计，(2) 新模型必须包含旧模型的所有变量。可以使用 anova() 函数来进行检验：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anova(lmm_random_coef,lmm_null) 
+</code></pre></div></div> <p>表明加入ses后，模型解释的方差增加了5.92%。</p> <p><strong>模型的对数似然</strong> 另一种判断新纳入变量是否有效的方法是比较模型的对数似然LL。-2LL渐进服从卡方分布，可以进行似然比卡方检验，从而得到p值来辅助判断。但需要注意：(1) 必须使用完全极大似然估计，(2) 新模型必须包含旧模型的所有变量。可以使用 anova() 函数来进行检验：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anova(lmm_random_coef,lmm_null) 
 </code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Data: df
 Models:
 lmm_null: mathach ~ 1 + (1 | id)
@@ -122,7 +122,7 @@ Correlation of Fixed Effects:
 ses         0.128              
 disclim     0.043  0.088       
 ses:disclim 0.091  0.050 0.114 
-</code></pre></div></div> <p>Random effects 部分，给出了三个随机效应的标准差：</p> <ul> <li> <p>截距随机效应 \(u_{0j}\) 的方差 \(\tau_{00}\) 为 3.6695</p> </li> <li> <p>ses斜率随机效应 \(u_{1j}\) 的方差 \(\tau_{11}\) 为 0.1566</p> </li> <li> <p>残差随机效应 \(r_{ij}\) 的标准差 \(\sigma^2\) 为 6.0659945</p> </li> <li> <p>随机效应相关系数相关系数 \(\rho(u_{0j}, u_{1j})\) 为 0.44。</p> </li> </ul> <p>Fixed effects 部分，给出了四个固定效应：</p> <ul> <li> <p>截距效应 \(\gamma_{00}\) 为 12.6606</p> </li> <li> <p>学校纪律环境主效应 \(\gamma_{01}\) 为 -1.1275</p> </li> <li> <p>学生ses主效应 \(\gamma_{10}\) 为 2.4112</p> </li> <li> <p>学生ses和学校纪律环境的跨层交互作用 \(\gamma_{11}\) 为 0.5711</p> </li> </ul> <p><strong>随机效应方差</strong> 同样通过VarCorr( ) 函数输出随机效应的方差和协方差：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>as.data.frame(VarCorr(lmm_full))
+</code></pre></div></div> <p>Random effects 部分，给出了三个随机效应的标准差：</p> <ul> <li> <p>截距随机效应 \(u_{0j}\) 的方差 \(\tau_{00}\) 为 3.6695</p> </li> <li> <p>ses斜率随机效应 \(u_{1j}\) 的方差 \(\tau_{11}\) 为 0.1566</p> </li> <li> <p>残差随机效应 \(r_{ij}\) 的方差 \(\sigma^2\) 为 36.7963</p> </li> <li> <p>随机效应相关系数相关系数 \(\rho(u_{0j}, u_{1j})\) 为 0.44。</p> </li> </ul> <p>Fixed effects 部分，给出了四个固定效应：</p> <ul> <li> <p>截距效应 \(\gamma_{00}\) 为 12.6606</p> </li> <li> <p>学校纪律环境主效应 \(\gamma_{01}\) 为 -1.1275</p> </li> <li> <p>学生ses主效应 \(\gamma_{10}\) 为 2.4112</p> </li> <li> <p>学生ses和学校纪律环境的跨层交互作用 \(\gamma_{11}\) 为 0.5711</p> </li> </ul> <p><strong>随机效应方差</strong> 同样通过VarCorr( ) 函数输出随机效应的方差和协方差：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>as.data.frame(VarCorr(lmm_full))
 </code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       grp        var1 var2       vcov     sdcor
 1       id (Intercept) &lt;NA&gt;  3.6695224 1.9155998
 2       id         ses &lt;NA&gt;  0.1566169 0.3957485
@@ -136,7 +136,7 @@ tau00_ses &lt;-  #随机斜率模型层2截距模型残差方差
 R2 = (tau00_ses - tau00_full)/tau00_ses  #计算R^2
 R2
 </code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 0.2331468
-</code></pre></div></div> <p>表明学校纪律环境解释了 23% 的学校间截距差异。</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 学校纪律环境对学校ses斜率差异的方差解释率
+</code></pre></div></div> <p>表明学校纪律环境解释了 23.31% 的学校间截距差异。</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 学校纪律环境对学校ses斜率差异的方差解释率
 tau11_full &lt;-  #全模型层2斜率模型残差方差
   as.data.frame(VarCorr(lmm_full))[as.data.frame(VarCorr(lmm_full))$var1 == 'ses', 'vcov'][1]
 tau11_ses &lt;-  #随机斜率模型层2斜率模型残差方差
@@ -144,7 +144,7 @@ tau11_ses &lt;-  #随机斜率模型层2斜率模型残差方差
 R2 = (tau11_ses - tau11_full)/tau11_ses  #计算R^2
 R2
 </code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 0.6068091
-</code></pre></div></div> <p>表明学校纪律环境解释了 61% 的学校间ses斜率差异。</p> <p><strong>模型比较</strong> 使用似然比卡方检验来比较全模型和随机斜率模型：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anova(lmm_full, lmm_random_coef)
+</code></pre></div></div> <p>表明学校纪律环境解释了 60.68% 的学校间ses斜率差异。</p> <p><strong>模型比较</strong> 使用似然比卡方检验来比较全模型和随机斜率模型：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anova(lmm_full, lmm_random_coef)
 </code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Data: df
 Models:
 lmm_random_coef: mathach ~ 1 + ses + (1 + ses | id)
