@@ -53,7 +53,7 @@ var(wle)
 ## [1] 1.253939
 var(theta)
 ## [1] 1.019041
-</code></pre> <p>可以看到，在模拟的数据中，实际能力的方差为1.02，但WLE分数的方差为1.25。</p> <p>为了得到方差的无偏估计，LSA的认知测验一般使用边缘极大似然法 (Marginal Maximum Likelihood, MML) 来估计学生的能力分布。MML直接估计群体的能力分布，而不是先估计个体能力再进行汇总，可以直接得到总体方差的无偏估计。MML可以看做一种贝叶斯估计，群体的能力分布即是先验分布，可以通过群体的能力分布进一步来估计个别学生的能力分布，即后验分布。根据贝叶斯定理，第 \(j\) 个学生能力的后验分布为：</p> \[\begin{align} h(\theta|x) = \frac{f(x|\theta)g(\theta)}{f(x)} \end{align}\] <table> <tbody> <tr> <td>其中 $$f(x</td> <td>\theta)\(是学生能力为\)\theta\(时做出反应序列\)x\(的概率。\)g(\theta)\(是能力的先验分布，在LSA中一般是一个国家或地区的学生能力分布。\)f(x)$$ 是不考虑能力的反应序列分布。</td> </tr> </tbody> </table> <p>通过学生能力的后验分布，也可以计算各国家或地区的学生能力分布：</p> \[\begin{align} g(\theta)=\int h(\theta|x) f(x) d x \end{align}\] <p>仍然使用上面生成的数据，通过MML估计来计算学生能力方差：</p> <pre><code class="language-{r}">model_mml &lt;- tam.mml(resp)  
+</code></pre> <p>可以看到，在模拟的数据中，实际能力的方差为1.02，但WLE分数的方差为1.25。</p> <p>为了得到方差的无偏估计，LSA的认知测验一般使用边缘极大似然法 (Marginal Maximum Likelihood, MML) 来估计学生的能力分布。MML直接估计群体的能力分布，而不是先估计个体能力再进行汇总，可以直接得到总体方差的无偏估计。MML可以看做一种贝叶斯估计，群体的能力分布即是先验分布，可以通过群体的能力分布进一步来估计个别学生的能力分布，即后验分布。根据贝叶斯定理，第 \(j\) 个学生能力的后验分布为：</p> \[\begin{align} h(\theta|x) = \frac{f(x|\theta)g(\theta)}{f(x)} \end{align}\] <p>其中 \(f(x\|\theta)\) 是学生能力为 \(\theta\) 时做出反应序列 \(x\) 的概率。 \(g(\theta)\) 是能力的先验分布，在LSA中一般是一个国家或地区的学生能力分布。 \(f(x)\) 是不考虑能力的反应序列分布。</p> <p>通过学生能力的后验分布，也可以计算各国家或地区的学生能力分布：</p> \[\begin{align} g(\theta)=\int h(\theta|x) f(x) d x \end{align}\] <p>仍然使用上面生成的数据，通过MML估计来计算学生能力方差：</p> <pre><code class="language-{r}">model_mml &lt;- tam.mml(resp)  
 model_mml$variance 
 </code></pre> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>         [,1]
 [1,] 1.015029
