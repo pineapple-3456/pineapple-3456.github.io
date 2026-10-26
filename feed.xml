@@ -1,669 +1,240 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://pineapple-3456.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://pineapple-3456.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-10-26T06:35:58+00:00</updated><id>https://pineapple-3456.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">a post with marimo snippets</title><link href="https://pineapple-3456.github.io/blog/2025/marimo/" rel="alternate" type="text/html" title="a post with marimo snippets"/><published>2025-04-28T12:00:00+00:00</published><updated>2025-04-28T12:00:00+00:00</updated><id>https://pineapple-3456.github.io/blog/2025/marimo</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2025/marimo/"><![CDATA[<p><a href="https://marimo.io">marimo</a> notebooks can run Python directly in the reader’s browser. Opt a page in from its front matter:</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
-<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
-<span class="na">title</span><span class="pi">:</span> <span class="s">a post with marimo snippets</span>
-<span class="na">marimo</span><span class="pi">:</span> <span class="kc">true</span>
-<span class="nn">---</span>
-</code></pre></div></div> <p>Nothing is loaded on pages without that flag, so bundling the plugin costs nothing site-wide.</p> <h2 id="runnable-snippets">Runnable snippets</h2> <p>Wrap fenced Python blocks in a container and the runtime turns them into an interactive notebook after the page loads:</p> <div class="al-marimo-inline"> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">marimo</span> <span class="k">as</span> <span class="n">mo</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://pineapple-3456.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://pineapple-3456.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-10-26T08:09:53+00:00</updated><id>https://pineapple-3456.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">教育测量中的项目反应理论与合理值</title><link href="https://pineapple-3456.github.io/blog/2025/%E6%95%99%E8%82%B2%E6%B5%8B%E9%87%8F%E4%B8%AD%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%8F%8D%E5%BA%94%E7%90%86%E8%AE%BA%E4%B8%8E%E5%90%88%E7%90%86%E5%80%BC/" rel="alternate" type="text/html" title="教育测量中的项目反应理论与合理值"/><published>2025-02-07T00:00:00+00:00</published><updated>2025-02-07T00:00:00+00:00</updated><id>https://pineapple-3456.github.io/blog/2025/%E6%95%99%E8%82%B2%E6%B5%8B%E9%87%8F%E4%B8%AD%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%8F%8D%E5%BA%94%E7%90%86%E8%AE%BA%E4%B8%8E%E5%90%88%E7%90%86%E5%80%BC</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2025/%E6%95%99%E8%82%B2%E6%B5%8B%E9%87%8F%E4%B8%AD%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%8F%8D%E5%BA%94%E7%90%86%E8%AE%BA%E4%B8%8E%E5%90%88%E7%90%86%E5%80%BC/"><![CDATA[<p>在国际大型教育调查 (Large-Scale Assessment, LSA) 中，通常需要评估学生的认知能力。不同于一般的考试，LSA中的认知能力测验一般是作为整个调查的一部分来进行，时间有限，学生只能从题库中抽取少量问题来回答。因此，每个学生实际上进行了不同的子测验。每个子测验难度可能是不同的，这就导致来自不同子测验的分数无法直接比较。假如某一个学生抽到了难度为2的题目，正确概率为0.40，而另一个学生抽到了难度为1的题目，正确概率为0.65。因为测验难度不同，直接根据正确概率认定后者能力高于前者是不合适的，此时不同学生的分数不能相互比较。然而，在后期进行数据分析时，我们希望每个学生的测验分数处在同一个可比较的系统上。</p> <p>项目反应理论 (Item Response Theory, IRT) 有助于解决这一问题。IRT的基本思想是，测验项目的正确作答概率是学生潜在能力的函数，因此可以通过测验项目的正确作答概率来计算潜在能力。对于每个测验项目，都建立了正确概率与能力的唯一确定关系，这样就把不同的测验项目都纳入到同一个系统当中，进而可以进行比较。例如，对于难度为2的测验项目，可以估计正确概率为0.40所代表的能力值，同样对于难度为1的测验项目也可以估计正确概率为0.65所代表的能力值，进而可以直接比较不同学生的能力。</p> <h1 id="rasch模型">Rasch模型</h1> <p>最简单的IRT模型是 Rasch 模型，也叫做单参数模型 (1PLM)，因为只有一个参数 (难度b)。适合于二分计分题目，这类题目的作答只有正确和错误两种可能。对于第 \(i\) 个测验项目，项目特征函数 (Item Characteristic Function, ICF) 是一个Logit函数：</p> \[\begin{align} P(x_i=1) = \frac{exp(\theta-b_i)}{1+exp(\theta-b_i)} \end{align}\] <p>这里 \(P(x_i=1)\) 表示正确作答的概率， \(\theta\) 表示学生的能力， \(b_i\) 表示项目的难度参数。同时也有错误作答的概率 \(P(x_i=0) = 1-P(x_i=1)=1/[1+exp(\theta-b_i)]\) 。因此：</p> \[\begin{align} \frac{P(x_i=1)}{P(x_i=0)} = \exp(\theta-b_i)\\ \ln \left ( \frac{P(x_i=1)}{P(x_i=0)}\right ) = \theta-b_i \\ \end{align}\] <p>表明正确作答的几率 (odds) 随着能力提升而提升。但只有能力和项目难度相当时，正确概率和能力才近似线性变化。当能力远高于项目难度时，正确概率的变化逐渐减缓，即天花板效应，同理也有地板效应。对几率取对数后与能力线性变化。可以绘制项目特征曲线 (Item Characteristic Curve, ICC)：</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c1">#难度为0</span><span class="w">
 
-<span class="n">slider</span> <span class="o">=</span> <span class="n">mo</span><span class="p">.</span><span class="n">ui</span><span class="p">.</span><span class="nf">slider</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sh">"</span><span class="s">n</span><span class="sh">"</span><span class="p">)</span>
-<span class="n">slider</span>
-</code></pre></div> </div> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mo</span><span class="p">.</span><span class="nf">md</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">The first </span><span class="si">{</span><span class="n">slider</span><span class="p">.</span><span class="n">value</span><span class="si">}</span><span class="s"> squares: </span><span class="si">{</span><span class="p">[</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">slider</span><span class="p">.</span><span class="n">value</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
-</code></pre></div> </div> </div> <p>Until the runtime has moved those blocks into place the container stays hidden, so readers never see the raw source flash before it becomes a notebook.</p> <h2 id="embedding-a-hosted-notebook">Embedding a hosted notebook</h2> <p>If you already publish a notebook — on <code class="language-plaintext highlighter-rouge">marimo.app</code> or your own WASM host — embed it instead:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">al_marimo_embed</span><span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="s2">"https://marimo.app/l/your-notebook"</span><span class="w"> </span><span class="na">height</span><span class="o">=</span><span class="s2">"700px"</span><span class="w"> </span><span class="na">caption</span><span class="o">=</span><span class="s2">"Sampling demo"</span><span class="w"> </span><span class="cp">%}</span>
-</code></pre></div></div> <p>The frame is sandboxed <strong>without</strong> <code class="language-plaintext highlighter-rouge">allow-same-origin</code>, so the embedded notebook cannot reach this page’s storage or cookies.</p> <h2 id="a-note-on-what-this-loads">A note on what this loads</h2> <p>The <code class="language-plaintext highlighter-rouge">marimo-snippets</code> runtime is vendored into the plugin at a pinned version and served from your own site, rather than pulled from a CDN — so no third-party origin executes script in your readers’ pages. Running a notebook does contact marimo’s host, which is worth knowing before you opt a page in.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="code"/><category term="formatting"/><summary type="html"><![CDATA[running Python in the browser with marimo]]></summary></entry><entry><title type="html">a post with plotly.js</title><link href="https://pineapple-3456.github.io/blog/2025/plotly/" rel="alternate" type="text/html" title="a post with plotly.js"/><published>2025-03-26T14:24:00+00:00</published><updated>2025-03-26T14:24:00+00:00</updated><id>https://pineapple-3456.github.io/blog/2025/plotly</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2025/plotly/"><![CDATA[<p>This is an example post with some <a href="https://plotly.com/javascript/">plotly</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">plotly
-</span><span class="sb">{
-  "data": [
-    {
-      "x": [1, 2, 3, 4],
-      "y": [10, 15, 13, 17],
-      "type": "scatter"
-    },
-    {
-      "x": [1, 2, 3, 4],
-      "y": [16, 5, 11, 9],
-      "type": "scatter"
-    }
-  ]
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-plotly">{
-  "data": [
-    {
-      "x": [1, 2, 3, 4],
-      "y": [10, 15, 13, 17],
-      "type": "scatter"
-    },
-    {
-      "x": [1, 2, 3, 4],
-      "y": [16, 5, 11, 9],
-      "type": "scatter"
-    }
-  ]
-}
-</code></pre> <p>Also another example chart.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">plotly
-</span><span class="sb">{
-  "data": [
-    {
-      "x": [1, 2, 3, 4],
-      "y": [10, 15, 13, 17],
-      "mode": "markers"
-    },
-    {
-      "x": [2, 3, 4, 5],
-      "y": [16, 5, 11, 9],
-      "mode": "lines"
-    },
-    {
-      "x": [1, 2, 3, 4],
-      "y": [12, 9, 15, 12],
-      "mode": "lines+markers"
-    }
-  ],
-  "layout": {
-    "title": {
-      "text": "Line and Scatter Plot"
-    }
-  }
-}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>This is how it looks like:</p> <pre><code class="language-plotly">{
-  "data": [
-    {
-      "x": [1, 2, 3, 4],
-      "y": [10, 15, 13, 17],
-      "mode": "markers"
-    },
-    {
-      "x": [2, 3, 4, 5],
-      "y": [16, 5, 11, 9],
-      "mode": "lines"
-    },
-    {
-      "x": [1, 2, 3, 4],
-      "y": [12, 9, 15, 12],
-      "mode": "lines+markers"
-    }
-  ],
-  "layout": {
-    "title": {
-      "text": "Line and Scatter Plot"
-    }
-  }
-}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included plotly.js code could look like]]></summary></entry><entry><title type="html">a post with image galleries</title><link href="https://pineapple-3456.github.io/blog/2024/photo-gallery/" rel="alternate" type="text/html" title="a post with image galleries"/><published>2024-12-04T01:59:00+00:00</published><updated>2024-12-04T01:59:00+00:00</updated><id>https://pineapple-3456.github.io/blog/2024/photo-gallery</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2024/photo-gallery/"><![CDATA[<p>The images in this post are all zoomable, arranged into different mini-galleries using different libraries.</p> <h2 id="lightbox2">Lightbox2</h2> <p><a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg" data-lightbox="roadtrip"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"/></a> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" data-lightbox="roadtrip"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"/></a> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg" data-lightbox="roadtrip"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"/></a></p> <hr/> <h2 id="photoswipe"><a href="https://photoswipe.com/">PhotoSwipe</a></h2> <div class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started"> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt=""/> </a> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg" data-pswp-width="1875" data-pswp-height="2500" data-cropped="true" target="_blank"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt=""/> </a> <a href="https://unsplash.com" data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt=""/> </a> <div> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg" data-pswp-width="2500" data-pswp-height="1667" target="_blank"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg" alt=""/> </a> </div> </div> <hr/> <h2 id="spotlight-js"><a href="https://nextapps-de.github.io/spotlight/">Spotlight JS</a></h2> <div class="spotlight-group"> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"/> </a> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"/> </a> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"/> </a> </div> <div class="spotlight-group"> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-200.jpg"/> </a> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-200.jpg"/> </a> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg"/> </a> </div> <hr/> <h2 id="venobox"><a href="https://veno.es/venobox/">Venobox</a></h2> <p><a class="venobox" data-gall="myGallery" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"/></a> <a class="venobox" data-gall="myGallery" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"/></a> <a class="venobox" data-gall="myGallery" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"/></a></p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="images"/><summary type="html"><![CDATA[this is what included image galleries could look like]]></summary></entry><entry><title type="html">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</title><link href="https://pineapple-3456.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/" rel="alternate" type="text/html" title="Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra"/><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://pineapple-3456.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/"><![CDATA[<p>Gemini breaks new ground with a faster model, longer context, AI agents and moreLearn more:Learn more:Learn more:Models &amp; ResearchProductsInfrastructure &amp; cloudTechnology Learn more: ProductsPlatformsDevices Learn more: Outreach &amp; initiativesLeadershipInside Google Learn more: May 14, 2024 We’re introducing a series of updates across the Gemini family of models, including the new 1.5 Flash, our lightweight model for speed and efficiency, and Project Astra, our vision for the future of AI assistants. Demis HassabisCEO of Google DeepMind, on behalf of the Gemini teamIn December, we launched our first natively multimodal model Gemini 1.0 in three sizes: Ultra, Pro and Nano. Just a few months later we released 1.5 Pro, with enhanced performance and a breakthrough long context window of 1 million tokens.Developers and enterprise customers have been putting 1.5 Pro to use in incredible ways and finding its long context window, multimodal reasoning capabilities and impressive overall performance incredibly useful.We know from user feedback that some applications need lower latency and a lower cost to serve. This inspired us to keep innovating, so today, we’re introducing Gemini 1.5 Flash: a model that’s lighter-weight than 1.5 Pro, and designed to be fast and efficient to serve at scale.Both 1.5 Pro and 1.5 Flash are available in public preview with a 1 million token context window in Google AI Studio and Vertex AI. And now, 1.5 Pro is also available with a 2 million token context window via waitlist to developers using the API and to Google Cloud customers.We’re also introducing updates across the Gemini family of models, announcing our next generation of open models, Gemma 2, and sharing progress on the future of AI assistants, with Project Astra.Context lengths of leading foundation models compared with Gemini 1.5’s 2 million token capability1.5 Flash is the newest addition to the Gemini model family and the fastest Gemini model served in the API. It’s optimized for high-volume, high-frequency tasks at scale, is more cost-efficient to serve and features our breakthrough long context window.While it’s a lighter weight model than 1.5 Pro, it’s highly capable of multimodal reasoning across vast amounts of information and delivers impressive quality for its size.The new Gemini 1.5 Flash model is optimized for speed and efficiency, is highly capable of multimodal reasoning and features our breakthrough long context window.1.5 Flash excels at summarization, chat applications, image and video captioning, data extraction from long documents and tables, and more. This is because it’s been trained by 1.5 Pro through a process called “distillation,” where the most essential knowledge and skills from a larger model are transferred to a smaller, more efficient model.Read more about 1.5 Flash in our updated Gemini 1.5 technical report, on the Gemini technology page, and learn about 1.5 Flash’s availability and pricing.Over the last few months, we’ve significantly improved 1.5 Pro, our best model for general performance across a wide range of tasks.Beyond extending its context window to 2 million tokens, we’ve enhanced its code generation, logical reasoning and planning, multi-turn conversation, and audio and image understanding through data and algorithmic advances. We see strong improvements on public and internal benchmarks for each of these tasks.1.5 Pro can now follow increasingly complex and nuanced instructions, including ones that specify product-level behavior involving role, format and style. We’ve improved control over the model’s responses for specific use cases, like crafting the persona and response style of a chat agent or automating workflows through multiple function calls. And we’ve enabled users to steer model behavior by setting system instructions.We added audio understanding in the Gemini API and Google AI Studio, so 1.5 Pro can now reason across image and audio for videos uploaded in Google AI Studio. And we’re now integrating 1.5 Pro into Google products, including Gemini Advanced and in Workspace apps.Read more about 1.5 Pro in our updated Gemini 1.5 technical report and on the Gemini technology page.Gemini Nano is expanding beyond text-only inputs to include images as well. Starting with Pixel, applications using Gemini Nano with Multimodality will be able to understand the world the way people do — not just through text, but also through sight, sound and spoken language.Read more about Gemini 1.0 Nano on Android.Today, we’re also sharing a series of updates to Gemma, our family of open models built from the same research and technology used to create the Gemini models.We’re announcing Gemma 2, our next generation of open models for responsible AI innovation. Gemma 2 has a new architecture designed for breakthrough performance and efficiency, and will be available in new sizes.The Gemma family is also expanding with PaliGemma, our first vision-language model inspired by PaLI-3. And we’ve upgraded our Responsible Generative AI Toolkit with LLM Comparator for evaluating the quality of model responses.Read more on the Developer blog.As part of Google DeepMind’s mission to build AI responsibly to benefit humanity, we’ve always wanted to develop universal AI agents that can be helpful in everyday life. That’s why today, we’re sharing our progress in building the future of AI assistants with Project Astra (advanced seeing and talking responsive agent).To be truly useful, an agent needs to understand and respond to the complex and dynamic world just like people do — and take in and remember what it sees and hears to understand context and take action. It also needs to be proactive, teachable and personal, so users can talk to it naturally and without lag or delay.While we’ve made incredible progress developing AI systems that can understand multimodal information, getting response time down to something conversational is a difficult engineering challenge. Over the past few years, we’ve been working to improve how our models perceive, reason and converse to make the pace and quality of interaction feel more natural.Building on Gemini, we’ve developed prototype agents that can process information faster by continuously encoding video frames, combining the video and speech input into a timeline of events, and caching this information for efficient recall.By leveraging our leading speech models, we also enhanced how they sound, giving the agents a wider range of intonations. These agents can better understand the context they’re being used in, and respond quickly, in conversation.With technology like this, it’s easy to envision a future where people could have an expert AI assistant by their side, through a phone or glasses. And some of these capabilities are coming to Google products, like the Gemini app and web experience, later this year.We’ve made incredible progress so far with our family of Gemini models, and we’re always striving to advance the state-of-the-art even further. By investing in a relentless production line of innovation, we’re able to explore new ideas at the frontier, while also unlocking the possibility of new and exciting Gemini use cases.Learn more about Gemini and its capabilities.Collection Sign up for our newsletters with product updates, event information, special offers, and more. Done. Just one step more. Check your inbox to confirm your subscription.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can also subscribe with a different email address.
-  
-        Your information will be used in accordance with Google's privacy policy. You may opt out at any time.
-</code></pre></div></div>]]></content><author><name></name></author><category term="external-posts"/><category term="google"/><summary type="html"><![CDATA[We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.]]></summary></entry><entry><title type="html">a post with tabs</title><link href="https://pineapple-3456.github.io/blog/2024/tabs/" rel="alternate" type="text/html" title="a post with tabs"/><published>2024-05-01T00:32:13+00:00</published><updated>2024-05-01T00:32:13+00:00</updated><id>https://pineapple-3456.github.io/blog/2024/tabs</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2024/tabs/"><![CDATA[<p>This is how a post with <a href="https://github.com/Ovski4/jekyll-tabs">tabs</a> looks like. Note that the tabs could be used for different purposes, not only for code.</p> <h2 id="first-tabs">First tabs</h2> <p>To add tabs, use the following syntax:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">tabs</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="cp">%}</span>
+</span><span class="n">rasch_curve</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">curve</span><span class="p">(</span><span class="nf">exp</span><span class="p">(</span><span class="n">theta</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="nf">exp</span><span class="p">(</span><span class="n">theta</span><span class="o">-</span><span class="n">b</span><span class="p">)),</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"l"</span><span class="p">,</span><span class="w">  </span><span class="c1">#绘制曲线</span><span class="w">
+                     </span><span class="n">xname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'theta'</span><span class="p">,</span><span class="w"> </span><span class="n">xlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w">
+                     </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'theta'</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'prob(x=1)'</span><span class="p">)</span><span class="w">
 
-<span class="cp">{%</span><span class="w"> </span><span class="nt">tab</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="nv">tab-name-1</span><span class="w"> </span><span class="cp">%}</span>
+</span><span class="n">segments</span><span class="p">(</span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">y0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w">
+         </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">exp</span><span class="p">(</span><span class="m">1</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="nf">exp</span><span class="p">(</span><span class="m">1</span><span class="o">-</span><span class="n">b</span><span class="p">)),</span><span class="w"> </span><span class="n">lty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">  </span><span class="c1">#标记能力为1时的正确作答概率</span><span class="w">
 
-Content 1
+</span><span class="n">segments</span><span class="p">(</span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">-4</span><span class="p">,</span><span class="w"> </span><span class="n">y0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">exp</span><span class="p">(</span><span class="m">1</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="nf">exp</span><span class="p">(</span><span class="m">1</span><span class="o">-</span><span class="n">b</span><span class="p">)),</span><span class="w">
+         </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">exp</span><span class="p">(</span><span class="m">1</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="nf">exp</span><span class="p">(</span><span class="m">1</span><span class="o">-</span><span class="n">b</span><span class="p">)),</span><span class="w"> </span><span class="n">lty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/教育测量中的合理值figure1.png" alt="figure1" height="70%" width="70%"/></p> <p>图1是难度为0时的ICC。正确作答概率取决于能力与项目难度的相对位置。假设一个测验项目难度为0，有一个学生能力等于1，那他正确作答概率就在0.73左右。注意难度和学生的能力在同一尺度上，可以相互比较。ICC的特点是：能力与难度接近时，正确概率与能力近似线性变化，而能力与难度相差较远时，正确概率的变化幅度逐渐减缓，呈现出S型。除了Rasch模型，常见的二分计分Logit或Probit模型的ICF也具有这个特点，因为它们都是Logit或Probit函数的变体 (正态分布和逻辑分布的累积函数)。</p> <p>实际上，IRT最初的模型是基于Probit函数建立的。设想作答受到正态随机误差的影响，能力与误差之和超过项目难度时答对，因此正确概率是正态分布的累积函数。使用Logit函数作为ICF的一般形式是因为逻辑分布的累积函数有解析表达式，而正态分布没有，因此Logit的计算更方便。逻辑分布更接近于自由度为7的t分布，在后面会看到，使用双参数模型时，ICF可以被调整为更接近Probit函数的形式。</p> <p>Rasch是最简单的IRT模型，LSA中使用的模型一般要更复杂一些。例如 PISA 2018 使用了双参数Logit模型 (2PLM)，它是Rasch模型的推广：</p> \[\begin{align} P(x_i=1) = \frac{exp(Da_i(\theta-b_i))}{1+exp(Da_i(\theta-b_i))} \end{align}\] <p>和Rasch模型相比，加入了区分度参数 \(a_i\) 和比例因子 \(D\) 。区分度参数在 ICC 曲线中体现为曲线的陡峭程度，当曲线更陡峭时，相同的能力差异对应的正确率差异更大，对比区分度为1(蓝色) 和2(红色) 的ICC曲线：</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">d</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1.7</span><span class="w">  </span><span class="c1">#比例因子</span><span class="w">
 
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">tab</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="nv">tab-name-2</span><span class="w"> </span><span class="cp">%}</span>
-
-Content 2
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
-
-<span class="cp">{%</span><span class="w"> </span><span class="nt">endtabs</span><span class="w"> </span><span class="cp">%}</span>
-</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="5ec757d3-bbe4-468c-9ebf-6fc27d3c793a" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="5ec757d3-bbe4-468c-9ebf-6fc27d3c793a" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
-</code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
-</code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">pputs</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span>
-</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="47c1b8a8-57e4-4eab-b132-36306aff9077" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="47c1b8a8-57e4-4eab-b132-36306aff9077" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="s2">"</span><span class="s">whatsup"</span>
-  <span class="pi">-</span> <span class="s2">"</span><span class="s">hi"</span>
-</code></pre></div></div> </li> <li> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"hello"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"whatsup"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hi"</span><span class="p">]</span><span class="w">
+</span><span class="n">plotCurve</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="p">){</span><span class="w">
+  </span><span class="n">curve</span><span class="p">(</span><span class="nf">exp</span><span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">theta</span><span class="o">-</span><span class="n">b</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="nf">exp</span><span class="p">(</span><span class="n">d</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">theta</span><span class="o">-</span><span class="n">b</span><span class="p">))),</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"l"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col</span><span class="p">,</span><span class="w">  </span><span class="c1">#绘制曲线</span><span class="w">
+        </span><span class="n">xname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'theta'</span><span class="p">,</span><span class="w"> </span><span class="n">xlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">ylim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w">
+        </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'theta'</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'prob(x=1)'</span><span class="p">)</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="c07003f2-4091-4f4d-954b-3c74b925f4ed" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="c07003f2-4091-4f4d-954b-3c74b925f4ed" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://pineapple-3456.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://pineapple-3456.github.io/blog/2024/typograms</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
-</span><span class="sb">+----+
-|    |---&gt; My first diagram!
-+----+</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-typograms">+----+
-|    |---&gt; My first diagram!
-+----+
-</code></pre> <p>Another example:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
-</span><span class="sb">.------------------------.
-|.----------------------.|
-||"https://example.com" ||
-|'----------------------'|
-| ______________________ |
-||                      ||
-||   Welcome!           ||
-||                      ||
-||                      ||
-||  .----------------.  ||
-||  | username       |  ||
-||  '----------------'  ||
-||  .----------------.  ||
-||  |"*******"       |  ||
-||  '----------------'  ||
-||                      ||
-||  .----------------.  ||
-||  |   "Sign-up"    |  ||
-||  '----------------'  ||
-||                      ||
-|+----------------------+|
-.------------------------.</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>which generates:</p> <pre><code class="language-typograms">.------------------------.
-|.----------------------.|
-||"https://example.com" ||
-|'----------------------'|
-| ______________________ |
-||                      ||
-||   Welcome!           ||
-||                      ||
-||                      ||
-||  .----------------.  ||
-||  | username       |  ||
-||  '----------------'  ||
-||  .----------------.  ||
-||  |"*******"       |  ||
-||  '----------------'  ||
-||                      ||
-||  .----------------.  ||
-||  |   "Sign-up"    |  ||
-||  '----------------'  ||
-||                      ||
-|+----------------------+|
-.------------------------.
-</code></pre> <p>For more examples, check out the <a href="https://google.github.io/typograms/#examples">typograms documentation</a>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="diagrams"/><summary type="html"><![CDATA[this is what included typograms code could look like]]></summary></entry><entry><title type="html">a post that can be cited</title><link href="https://pineapple-3456.github.io/blog/2024/post-citation/" rel="alternate" type="text/html" title="a post that can be cited"/><published>2024-04-28T15:06:00+00:00</published><updated>2024-04-28T15:06:00+00:00</updated><id>https://pineapple-3456.github.io/blog/2024/post-citation</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2024/post-citation/"><![CDATA[<p>This is an example post that can be cited. The content of the post ends here, while the citation information is automatically provided below. The only thing needed is for you to set the <code class="language-plaintext highlighter-rouge">citation</code> key in the front matter to <code class="language-plaintext highlighter-rouge">true</code>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="citation"/><summary type="html"><![CDATA[this is what a post that can be cited looks like]]></summary></entry><entry><title type="html">a post with pseudo code</title><link href="https://pineapple-3456.github.io/blog/2024/pseudocode/" rel="alternate" type="text/html" title="a post with pseudo code"/><published>2024-04-15T00:01:00+00:00</published><updated>2024-04-15T00:01:00+00:00</updated><id>https://pineapple-3456.github.io/blog/2024/pseudocode</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2024/pseudocode/"><![CDATA[<p>This is an example post with some pseudo code rendered by <a href="https://github.com/SaswatPadhi/pseudocode.js">pseudocode</a>. The example presented here is the same as the one in the <a href="https://saswat.padhi.me/pseudocode.js/">pseudocode.js</a> documentation, with only one simple but important change: everytime you would use <code class="language-plaintext highlighter-rouge">$</code>, you should use <code class="language-plaintext highlighter-rouge">$$</code> instead. Also, note that the <code class="language-plaintext highlighter-rouge">pseudocode</code> key in the front matter is set to <code class="language-plaintext highlighter-rouge">true</code> to enable the rendering of pseudo code. As an example, using this code:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">pseudocode
-</span><span class="sb">% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\PROCEDURE{Quicksort}{$$A, p, r$$}
-    \IF{$$p &lt; r$$}
-        \STATE $$q = $$ \CALL{Partition}{$$A, p, r$$}
-        \STATE \CALL{Quicksort}{$$A, p, q - 1$$}
-        \STATE \CALL{Quicksort}{$$A, q + 1, r$$}
-    \ENDIF
-\ENDPROCEDURE
-\PROCEDURE{Partition}{$$A, p, r$$}
-    \STATE $$x = A[r]$$
-    \STATE $$i = p - 1$$
-    \FOR{$$j = p$$ \TO $$r - 1$$}
-        \IF{$$A[j] &lt; x$$}
-            \STATE $$i = i + 1$$
-            \STATE exchange
-            $$A[i]$$ with $$A[j]$$
-        \ENDIF
-        \STATE exchange $$A[i]$$ with $$A[r]$$
-    \ENDFOR
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Generates:</p> <pre><code class="language-pseudocode">% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\PROCEDURE{Quicksort}{$$A, p, r$$}
-    \IF{$$p &lt; r$$}
-        \STATE $$q = $$ \CALL{Partition}{$$A, p, r$$}
-        \STATE \CALL{Quicksort}{$$A, p, q - 1$$}
-        \STATE \CALL{Quicksort}{$$A, q + 1, r$$}
-    \ENDIF
-\ENDPROCEDURE
-\PROCEDURE{Partition}{$$A, p, r$$}
-    \STATE $$x = A[r]$$
-    \STATE $$i = p - 1$$
-    \FOR{$$j = p$$ \TO $$r - 1$$}
-        \IF{$$A[j] &lt; x$$}
-            \STATE $$i = i + 1$$
-            \STATE exchange
-            $$A[i]$$ with $$A[j]$$
-        \ENDIF
-        \STATE exchange $$A[i]$$ with $$A[r]$$
-    \ENDFOR
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included pseudo code could look like]]></summary></entry><entry><title type="html">a post with code diff</title><link href="https://pineapple-3456.github.io/blog/2024/code-diff/" rel="alternate" type="text/html" title="a post with code diff"/><published>2024-01-27T19:22:00+00:00</published><updated>2024-01-27T19:22:00+00:00</updated><id>https://pineapple-3456.github.io/blog/2024/code-diff</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2024/code-diff/"><![CDATA[<p>You can display diff code by using the regular markdown syntax:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff
-</span><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>Which generates:</p> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
-</span><span class="gd">--- a/sample.js
-</span><span class="gi">+++ b/sample.js
-</span><span class="p">@@ -1 +1 @@</span>
-<span class="gd">-console.log("Hello World!")
-</span><span class="gi">+console.log("Hello from Diff2Html!")
-</span></code></pre></div></div> <p>But this is difficult to read, specially if you have a large diff. You can use <a href="https://diff2html.xyz/">diff2html</a> to display a more readable version of the diff. For this, just use <code class="language-plaintext highlighter-rouge">diff2html</code> instead of <code class="language-plaintext highlighter-rouge">diff</code> for the code block language:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff2html
-</span><span class="sb">diff --git a/sample.js b/sample.js
-index 0000001..0ddf2ba
---- a/sample.js
-+++ b/sample.js
-@@ -1 +1 @@
--console.log("Hello World!")
-+console.log("Hello from Diff2Html!")</span>
-<span class="p">```</span>
-</code></pre></div></div> <p>If we use a longer example, for example <a href="https://github.com/rtfpessoa/diff2html/commit/c2c253d3e3f8b8b267f551e659f72b44ca2ac927">this commit from diff2html</a>, it will generate the following output:</p> <pre><code class="language-diff2html">From 2aaae31cc2a37bfff83430c2c914b140bee59b6a Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sun, 9 Oct 2016 16:41:54 +0100
-Subject: [PATCH 1/2] Initial template override support
 
+</span><span class="n">plotCurve</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'blue'</span><span class="p">);</span><span class="n">par</span><span class="p">(</span><span class="n">new</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">  </span><span class="c1">#区分度为1（蓝色）</span><span class="w">
+</span><span class="n">plotCurve</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'red'</span><span class="p">)</span><span class="w">  </span><span class="c1">#区分度为2（红色）</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/教育测量中的合理值figure2.png" alt="figure2" height="70%" width="70%"/></p> <p>比例因子D是为了使ICC曲线更接近Probit曲线，正如上文提到的。D 常取1或1.7。可以对比Probit曲线 (蓝色)、使用D = 1.7调整的Logit曲线 (红色) 和没有调整的Logit曲线 (绿色)，会发现经过D调整后的Logit曲线与Probit更接近：</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">curve</span><span class="p">(</span><span class="n">pnorm</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"l"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'blue'</span><span class="p">,</span><span class="w"> </span><span class="c1">#Probit曲线（蓝色）</span><span class="w">
+      </span><span class="n">xname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'theta'</span><span class="p">,</span><span class="w"> </span><span class="n">xlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">ylim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w">
+      </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'theta'</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'prob(x=1)'</span><span class="p">)</span><span class="w">
+</span><span class="n">par</span><span class="p">(</span><span class="n">new</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="n">curve</span><span class="p">(</span><span class="n">plogis</span><span class="p">(</span><span class="m">1.7</span><span class="o">*</span><span class="n">theta</span><span class="p">),</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"l"</span><span class="p">,</span><span class="w">  </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'red'</span><span class="p">,</span><span class="w">  </span><span class="c1">#经过D调整的Logit曲线（红色）</span><span class="w">
+      </span><span class="n">xname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'theta'</span><span class="p">,</span><span class="w"> </span><span class="n">xlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">ylim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w">
+      </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'theta'</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'prob(x=1)'</span><span class="p">)</span><span class="w">
+</span><span class="n">par</span><span class="p">(</span><span class="n">new</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="n">curve</span><span class="p">(</span><span class="n">plogis</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"l"</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'green'</span><span class="p">,</span><span class="w">  </span><span class="c1">#未调整的Logit曲线（绿色）</span><span class="w">
+      </span><span class="n">xname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'theta'</span><span class="p">,</span><span class="w"> </span><span class="n">xlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">ylim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w">
+      </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'theta'</span><span class="p">,</span><span class="w"> </span><span class="n">ylab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'prob(x=1)'</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div> <p><img src="/assets/img/教育测量中的合理值figure3.png" alt="figure3" height="70%" width="70%"/></p> <h1 id="合理值">合理值</h1> <p>对一个群体进行施测后，可以通过加权极大似然估计 (Weighted Maximum Likelihood) 得到每个学生的能力估计，这种估计量被称为WLE估计量 (Weighted Likelihood Estimate)。WLE估计在估计个别学生能力时是合理的，但是在LSA中，除了个别学生的能力，我们还想要得到每个地区的能力分布。这时使用WLE估计是不合理的。WLE估计存在误差，因此一组学生WLE分数的方差一定高于实际能力的方差，这就使得同一地区所有学生WLE分数的方差是地区方差的高估。我们知道在经典测验理论中，真分数的方差等于观测分数的方差乘以信度，而信度总是小于1，因此观测分数方差总是高于真分数方差。类似地，在项目反应理论中，人群能力的方差等于WLE分数的方差乘以信度，因此WLE分数的方差高估了实际能力的方差。</p> <p>模拟一组测验数据：</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">generateRasch</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">theta</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="n">N</span><span class="p">)</span><span class="w"> </span><span class="c1">#随机生成N个学生的能力theta，均值为0，方差为1</span><span class="w">
+  </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">-2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I</span><span class="p">)</span><span class="w">  </span><span class="c1">#生成I个项目的难度，最低-2，最高2</span><span class="w">
+  </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">plogis</span><span class="p">(</span><span class="n">outer</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="s2">"-"</span><span class="p">))</span><span class="w">  </span><span class="c1">#计算各theta和b下的正确作答概率</span><span class="w">
+  </span><span class="n">resp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="n">runif</span><span class="p">(</span><span class="n">N</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">I</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I</span><span class="p">))</span><span class="w">  </span><span class="c1">#根据正确概率生成反应数据</span><span class="w">
+  </span><span class="n">colnames</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="s2">"I"</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="n">resp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">resp</span><span class="p">,</span><span class="w"> </span><span class="n">theta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">theta</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c1"># 生成10000个学生在30个项目上的Rasch数据</span><span class="w">
+</span><span class="n">set.seed</span><span class="p">(</span><span class="m">42</span><span class="p">)</span><span class="w">
+</span><span class="n">generateData</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">generateRasch</span><span class="p">(</span><span class="m">10000</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">)</span><span class="w">
+</span><span class="n">resp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">generateData</span><span class="o">$</span><span class="n">resp</span><span class="w">
+</span><span class="n">theta</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">generateData</span><span class="o">$</span><span class="n">theta</span><span class="w">
+</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">generateData</span><span class="o">$</span><span class="n">b</span><span class="w">
+</span></code></pre></div></div> <p>计算所有学生的WLE分数，对比WLE分数方差和实际能力方差：</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">TAM</span><span class="p">)</span><span class="w">
+</span><span class="n">jml_model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tam.jml</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span><span class="w">
+</span><span class="n">wle</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">jml_model</span><span class="o">$</span><span class="n">WLE</span><span class="w">
+</span><span class="n">var</span><span class="p">(</span><span class="n">wle</span><span class="p">)</span><span class="w">
+</span><span class="c1">## [1] 1.228259</span><span class="w">
+</span><span class="n">var</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="w">
+</span><span class="c1">## [1] 1.012307</span><span class="w">
+</span></code></pre></div></div> <p>可以看到，在模拟的数据中，实际能力的方差为1.01，但WLE分数的方差为1.23。</p> <p>为了估计群体能力方差，LSA的认知测验一般使用边缘极大似然法 (Marginal Maximum Likelihood, MML) 来估计学生的能力分布。MML直接估计群体的能力分布，而不是先估计个体能力再进行汇总，可以直接估计总体方差。将估计的群体能力分布作为先验分布，可以通过群体的能力分布进一步来估计个别学生的能力分布，即后验分布。根据贝叶斯定理，第 \(j\) 个学生能力的后验分布为：</p> \[\begin{align} h(\theta|x) = \frac{f(x|\theta)g(\theta)}{f(x)} \end{align}\] <p>其中 \(f(x\vert\theta)\) 是学生能力为 \(\theta\) 时做出反应序列 \(x\) 的概率。 \(g(\theta)\) 是能力的先验分布，在LSA中一般是一个国家或地区的学生能力分布。 \(f(x)\) 是不考虑能力的反应序列分布。</p> <p>通过学生能力的后验分布，也可以计算各国家或地区的学生能力分布：</p> \[\begin{align} g(\theta)=\int h(\theta|x) f(x) d x \end{align}\] <p>仍然使用上面生成的数据，通过MML估计来计算学生能力方差：</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model_mml</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tam.mml</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span><span class="w">
+</span><span class="n">model_mml</span><span class="o">$</span><span class="n">variance</span><span class="w">
+</span></code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>         [,1]
+[1,] 0.9906087
+</code></pre></div></div> <p>可以看到，估计的方差为0.99，与实际能力方差非常接近。</p> <p>根据MML估计的群体能力分布，可以对每个学生计算能力的后验分布，其均值就是EAP点估计。为了估计群体分布，LSA中认知测验数据并不像问卷数据一样直接给出一个分数，而是对每个学生给出其能力后验分布的抽样。例如PISA一般会对每个学生给出10个抽样，这些抽样相当于每个学生能力的经验分布。抽样的值被称为合理值 (Plausible Value, PV)。</p> <p>注意在使用PV的过程中，不可以先对学生的多个PV取均值再计算群体方差，因为这样会低估群体的方差：</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pv</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tam.pv</span><span class="p">(</span><span class="n">model_mml</span><span class="p">)</span><span class="w">  </span><span class="c1">#对每个学生计算10个PV</span><span class="w">
+</span><span class="n">pv_10</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">pv</span><span class="o">$</span><span class="n">pv</span><span class="p">[,</span><span class="w"> </span><span class="m">-1</span><span class="p">]</span><span class="w">
+</span><span class="n">var</span><span class="p">(</span><span class="n">apply</span><span class="p">(</span><span class="n">pv_10</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p">))</span><span class="w">  </span><span class="c1">#将每个学生计算pv均值再计算方差</span><span class="w">
+</span><span class="c1">## [1] 0.8445937</span><span class="w">
+</span></code></pre></div></div> <p>可以先使用一个PV来估计方差：</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">var</span><span class="p">(</span><span class="n">pv_10</span><span class="p">[,</span><span class="m">1</span><span class="p">])</span><span class="w">
+</span><span class="c1">## [1] 0.9870122</span><span class="w">
+</span></code></pre></div></div> <p>正式分析应利用全部的PV，对于数据中给出的10个PV，可以对每个pv分别计算方差，然后再取10个方差的均值：</p> <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mean</span><span class="p">(</span><span class="n">apply</span><span class="p">(</span><span class="n">pv_10</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">var</span><span class="p">))</span><span class="w">
+</span><span class="c1">## [1] 0.992728</span><span class="w">
+</span></code></pre></div></div> <p>计算标准误时，还需要合并抽样方差和PV之间的插补方差。分析PISA数据时，还需要使用调查权重。</p> <h2 id="参考资料">参考资料：</h2> <ul> <li> <p>Margaret Wu, Hak Ping Tam, Tsung-Hau Jen. Educational Measurement for Applied Researchers: Theory into Practice.</p> </li> <li> <p><a href="https://edmeasurementsurveys.com/index.html">A Course on Test and Item Analyses</a></p> </li> <li> <p>OECD. PISA 2018 Technical report. Chapter 9 Scaling PISA data.</p> </li> </ul>]]></content><author><name></name></author><category term="统计"/><summary type="html"><![CDATA[Rasch模型和PV的含义]]></summary></entry><entry><title type="html">使用lme4建立线性混合模型</title><link href="https://pineapple-3456.github.io/blog/2025/%E4%BD%BF%E7%94%A8lme4%E5%BB%BA%E7%AB%8B%E7%BA%BF%E6%80%A7%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/" rel="alternate" type="text/html" title="使用lme4建立线性混合模型"/><published>2025-01-10T00:00:00+00:00</published><updated>2025-01-10T00:00:00+00:00</updated><id>https://pineapple-3456.github.io/blog/2025/%E4%BD%BF%E7%94%A8lme4%E5%BB%BA%E7%AB%8B%E7%BA%BF%E6%80%A7%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2025/%E4%BD%BF%E7%94%A8lme4%E5%BB%BA%E7%AB%8B%E7%BA%BF%E6%80%A7%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/"><![CDATA[<h1 id="线性混合模型">线性混合模型</h1> <p>社会科学研究中的数据经常具有层次结构，过去分析层次结构数据容易产生的一个问题是汇总偏差，即将不同组织的数据错误地纳入同一个模型中。例如对不同学校的学生的调查显示，学生的某种特质X可能会影响到学习成绩Y，然而X对Y的回归系数却不是恒定的，而是在不同学校间存在有统计意义的差异。线性混合模型的出现就是为了应对这种问题。应对的策略是允许X对Y的回归系数在一定范围内变化。</p> <p>考虑以上的以上的例子，使用普通的ols回归可以建立回归方程：</p> \[\begin{align} Y_i = \beta_0 + \beta_1X_i + e_i \end{align}\] <p>其中 \(i\) 代表第 \(i\) 个学生个体。</p> <p>混合模型可以允许回归系数在不同学校间有差异，注意(3)和(4)的因变量是(2)的回归系数：</p> \[\begin{align} &amp; Y_{ij} = \beta_{0j} + \beta_{1j}X_{ij} + r_{ij} \\ &amp; \beta_{0j} = \gamma_{00} + u_{0j} \\ &amp; \beta_{1j} = \gamma_{10} + u_{1j} \end{align}\] <p>其中 \(j\) 表示第 \(j\) 个学校， \(r_{ij}\) 表示学生水平的误差， \(u_{0j}\) 和 \(u_{1j}\) 表示学校水平在截距和斜率上的误差，即不同学校间截距和斜率的差异。我们将第一行的方程称为层1，代表学生水平，将后两行的方程称为层2，代表学校水平。</p> <p>如果 \(\beta_{0j}\) 和 \(\beta_{1j}\) 还能够被学校特征W预测，那么有</p> \[\begin{align} &amp; Y_{ij} = \beta_{0j} + \beta_{1j}X_{ij} + r_{ij} \\ &amp; \beta_{0j} = \gamma_{00} + \gamma_{01}W_{j} + u_{0j} \\ &amp; \beta_{1j} = \gamma_{10} + \gamma_{11}W_{j} + u_{1j} \end{align}\] <p>我们可以将混合模型进行合并：</p> \[\begin{align} Y_{ij} = \gamma_{00} + \gamma_{10}X_{ij} + \gamma_{01}W_{j} + \gamma_{11}X_{ij}W_{j} + u_{0j} + u_{1j}X_{ij} + r_{ij} \end{align}\] <p>对应的普通ols回归方程是一个包含X和W交互项的方程：</p> \[\begin{align} Y_{ij} = \beta_0 + \beta_1X_{ij} + \beta_2W_j + \beta_3X_{ij}W_j+ e_{ij} \end{align}\] <p>对比普通ols回归方程，可以发现二者的区别在于原本的误差项 \(e_{ij}\) 变为 \(u_{0j}+u_{1j}X_{ij}+r_{ij}\) 。实际上这正是线性混合模型与一般线性模型的主要区别：线性混合模型允许更加复杂的残差结构，这些残差依赖于 \(u_{0j}\) 和 \(u_{1j}\) ，因此在各学校中是不同的。线性混合模型中，残差被称为随机效应，其中 \(r_{ij}\) 称为层1残差， \(u_{0j}\) 称为截距的随机效应， \(u_{1j}\) 称为X斜率的随机效应。相应地，固定效应则是合并模型(8)中的系数，其中 \(\gamma_{00}\) 是截距的固定效应， \(\gamma_{10}\) 是X的固定效应， \(\gamma_{01}\) 是W的固定效应， \(\gamma_{11}\) 是X和W交互项的固定效应。熟悉随机效应和固定效应的含义有助于理解lme4的公式设定和结果。</p> <p>对于固定效应，我们关注的是它的系数，而对于随机效应，我们关注随机效应的方差和协方差。层1随机效应的方差记为 \(\mathrm{Var}(r_{ij}) = \sigma^2\) ，层2随机效应协方差阵为：</p> \[\begin{align} \mathrm{Var}\begin{bmatrix} u_{0j} \\ u_{1j} \end{bmatrix}= \begin{bmatrix} \tau_{00} &amp; \tau_{01} \\ \tau_{10} &amp; \tau_{11} \end{bmatrix} \end{align}\] <h1 id="实例">实例</h1> <p>这里主要展示计算过程，语句设置的要点参照下节。</p> <p>数据来自刘红云<a href="http://crup.com.cn/Book/TextDetail?doi=371b74c6-6b77-4f96-9c81-a0acd521f5e9">高级心理统计</a>第十三章13-3.SAV。其中，我们需要用到的变量有：</p> <ol> <li>因变量：mathach学生的数学成绩</li> <li>自变量：ses社会经济地位</li> <li>学校编码：id</li> <li>学校特征：disclim学校纪律环境</li> </ol> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>library(haven) #读sav文件
+library(lmerTest) #拟合线性混合模型
+
+df &lt;- read_sav('/Users/tan/Downloads/高级心理统计/13第十三章 多层线性模型简介/13-3.SAV') #文件导入
+</code></pre></div></div> <h2 id="零模型-单因素方差分析">零模型 (单因素方差分析)</h2> <p>线性混合模型的建模的一般程序是从简单到复杂，逐步加入变量。最简单的模型被称为零模型，可以为我们提供一些初步的信息，它在层1和层2都只包含截距：</p> \[\begin{align} &amp; Y_{ij}(mathach) = \beta_{0j} + r_{ij} \\ &amp; \beta_{0j} = \gamma_{00} + u_{0j} \\ \end{align}\] <p>合并模型为：</p> \[\begin{align} Y_{ij}(mathach) = \gamma_{00} + u_{0j} + r_{ij} \end{align}\] <p>零模型实际上是一个带随机效应的单因素方差分析模型。包含一个固定效应：</p> <ul> <li>\(\gamma_{00}\) 表示总均值</li> </ul> <p>两个随机效应：</p> <ul> <li>\(u_{0j}\) 代表学校间差异，方差为 \(\tau_{00}\) 。</li> <li>\(r_{ij}\) 代表学生个体差异，方差为 \(\sigma^2\) 。</li> </ul> <p>学校间差异和学生个体差异构成了总变异 \((\tau_{00}+\sigma^2)\) 。</p> <p>零模型为我们提供了分层数据的初步信息：对总平均数的估计 \(\gamma_{00}\) ，学校间方差 \(\tau_{00}\) ，学生个体间方差 \(\sigma^2\) ，以及学校间方差对总方差的解释率（ICC系数）。</p> <p>计算程序为：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lmm_null &lt;- lmerTest::lmer(mathach ~ 1 + (1|id), data = df, REML = FALSE,
+                 control = lmerControl(optimizer = 'bobyqa'))
+summary(lmm_null)
+</code></pre></div></div> <p>mathach ~ 1 表明固定部分只包含一个截距 \(\gamma_{00}\) ， (1|id) 表明层2随机效应也只包含截距的随机效应 \(u_{0j}\) ，依赖于学校id。</p> <p>计算的结果为：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: mathach ~ 1 + (1 | id)
+   Data: df
+Control: lmerControl(optimizer = "bobyqa")
+
+     AIC      BIC   logLik deviance df.resid
+ 47121.8  47142.4 -23557.9  47115.8     7182
+
+Scaled residuals:
+     Min       1Q   Median       3Q      Max
+-3.06262 -0.75365  0.02676  0.76070  2.74184
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ id       (Intercept)  8.553   2.925
+ Residual             39.148   6.257
+Number of obs: 7185, groups:  id, 160
+
+Fixed effects:
+            Estimate Std. Error       df t value Pr(&gt;|t|)
+(Intercept)  12.6371     0.2436 157.6209   51.87   &lt;2e-16 ***
 ---
- scripts/hulk.js                    |  4 ++--
- src/diff2html.js                   |  3 +--
- src/file-list-printer.js           | 11 ++++++++---
- src/hoganjs-utils.js               | 29 +++++++++++++++++------------
- src/html-printer.js                |  6 ++++++
- src/line-by-line-printer.js        |  6 +++++-
- src/side-by-side-printer.js        |  6 +++++-
- test/file-list-printer-tests.js    |  2 +-
- test/hogan-cache-tests.js          | 18 +++++++++++++++---
- test/line-by-line-tests.js         |  3 +--
- test/side-by-side-printer-tests.js |  3 +--
- 11 files changed, 62 insertions(+), 29 deletions(-)
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+</code></pre></div></div> <p>Random effects 部分，给出了两个随机效应的方差：</p> <ul> <li> <p>截距随机效应 \(u_{0j}\) 的方差 \(\tau_{00}\) 为 8.553</p> </li> <li> <p>残差 \(r_{ij}\) 的方差 \(\sigma^2\) 为 39.148</p> </li> </ul> <p>Fixed effects 部分，给出了一个固定效应：</p> <ul> <li>截距固定效应 \(\gamma_{00}\) 为12.6371。</li> </ul> <p><strong>ICC系数</strong> 零模型的一个重要作用是计算ICC系数。ICC系数是指组间方差对总方差的解释率：</p> \[\begin{align} ICC = \tau_{00}/(\tau_{00}+\sigma^2) \end{align}\] <p>ICC系数足够大，表明将模型分为学校和学生两个层次是合理的，ICC不应该低于0.059。虽然带有预测变量的模型也可以以同样的方式计算ICC，但一般的做法是使用零模型来计算。可以使用reghelper包的ICC( )函数来计算：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>library(reghelper)
+ICC(lmm_null)
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 0.1793109
+</code></pre></div></div> <p>表明零模型的ICC系数为0.1793109，组间差异足够大，建立混合模型是合理的。</p> <h2 id="随机斜率模型-随机系数模型">随机斜率模型 (随机系数模型)</h2> <p>在零模型的基础上，设置个体水平的回归方程，使层1包含预测变量ses，并且允许层1系数带有随机效应，就构成了随机斜率模型：</p> \[\begin{align} &amp; Y_{ij}(mathach) = \beta_{0j} + \beta_{1j}X_{ij}(ses) + r_{ij} \\ &amp; \beta_{0j} = \gamma_{00} + u_{0j} \\ &amp; \beta_{1j} = \gamma_{10} + u_{1j} \end{align}\] <p>合并模型为：</p> \[\begin{align} Y_{ij}(mathach) = \gamma_{00} + \gamma_{10}X_{ij}(ses) + u_{0j} + u_{1j}X_{ij}(ses) + r_{ij} \\ \end{align}\] <p>包含两个固定效应：</p> <ul> <li>\(\gamma_{00}\) 表示控制ses后各学校的调整均值的总均值</li> <li>\(\gamma_{10}\) 表示各学校ses斜率的均值</li> </ul> <p>三个随机效应：</p> <ul> <li>\(u_{0j}\) 表示调整均值的学校间差异，方差为 \(\tau_{00}\) 。</li> <li>\(u_{1j}\) 表示各学校间ses斜率的差异，方差为 \(\tau_{11}\) 。</li> <li>\(r_{ij}\) 表示ses无法解释的学生个体差异，方差为 \(\sigma^2\) 。</li> </ul> <p>在随机斜率模型中，我们建构了学生水平的回归方程。随机斜率模型能够提供：每个学校回归方程的平均截距 \(\gamma_{00}\) 和斜率 \(\gamma_{10}\) ，截距和斜率在学校间的变化程度 \(\tau_{00}\) 和 \(\tau_{11}\) ，以及二者的相关系数 \(\rho(u_{0j}, u_{1j})\) 。这个相关系数的含义是：当学校平均成绩变化时，ses斜率随着平均成绩变化的程度。</p> <p>计算程序为：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lmm_random_coef &lt;- lmerTest::lmer(mathach ~ 1 + ses + (1 + ses|id), data = df, REML = FALSE,
+                 control = lmerControl(optimizer = 'bobyqa'))
+summary(lmm_random_coef)
+</code></pre></div></div> <p>与零模型相比，固定部分中加入了预测变量ses，同时在随机部分中也加入了ses斜率的随机效应。结果为：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: mathach ~ 1 + ses + (1 + ses | id)
+   Data: df
+Control: lmerControl(optimizer = "bobyqa")
 
-diff --git a/scripts/hulk.js b/scripts/hulk.js
-index 5a793c18..a4b1a4d5 100755
---- a/scripts/hulk.js
-+++ b/scripts/hulk.js
-@@ -173,11 +173,11 @@ function namespace(name) {
- // write a template foreach file that matches template extension
- templates = extractFiles(options.argv.remain)
-   .map(function(file) {
--    var openedFile = fs.readFileSync(file, 'utf-8');
-+    var openedFile = fs.readFileSync(file, 'utf-8').trim();
-     var name;
-     if (!openedFile) return;
-     name = namespace(path.basename(file).replace(/\..*$/, ''));
--    openedFile = removeByteOrderMark(openedFile.trim());
-+    openedFile = removeByteOrderMark(openedFile);
-     openedFile = wrap(file, name, openedFile);
-     if (!options.outputdir) return openedFile;
-     fs.writeFileSync(path.join(options.outputdir, name + '.js')
-diff --git a/src/diff2html.js b/src/diff2html.js
-index 21b0119e..64e138f5 100644
---- a/src/diff2html.js
-+++ b/src/diff2html.js
-@@ -7,7 +7,6 @@
+     AIC      BIC   logLik deviance df.resid
+ 46648.5  46689.7 -23318.2  46636.5     7179
 
- (function() {
-   var diffParser = require('./diff-parser.js').DiffParser;
--  var fileLister = require('./file-list-printer.js').FileListPrinter;
-   var htmlPrinter = require('./html-printer.js').HtmlPrinter;
+Scaled residuals:
+     Min       1Q   Median       3Q      Max
+-3.12298 -0.73009  0.02184  0.75598  2.94309
 
-   function Diff2Html() {
-@@ -43,7 +42,7 @@
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr
+ id       (Intercept)  4.7852  2.1875
+          ses          0.3983  0.6311   -0.11
+ Residual             36.8316  6.0689
+Number of obs: 7185, groups:  id, 160
 
-     var fileList = '';
-     if (configOrEmpty.showFiles === true) {
--      fileList = fileLister.generateFileList(diffJson, configOrEmpty);
-+      fileList = htmlPrinter.generateFileListSummary(diffJson, configOrEmpty);
-     }
-
-     var diffOutput = '';
-diff --git a/src/file-list-printer.js b/src/file-list-printer.js
-index e408d9b2..1e0a2c61 100644
---- a/src/file-list-printer.js
-+++ b/src/file-list-printer.js
-@@ -8,11 +8,16 @@
- (function() {
-   var printerUtils = require('./printer-utils.js').PrinterUtils;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var baseTemplatesPath = 'file-summary';
-   var iconsBaseTemplatesPath = 'icon';
-
--  function FileListPrinter() {
-+  function FileListPrinter(config) {
-+    this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   FileListPrinter.prototype.generateFileList = function(diffFiles) {
-@@ -38,5 +43,5 @@
-     });
-   };
-
--  module.exports.FileListPrinter = new FileListPrinter();
-+  module.exports.FileListPrinter = FileListPrinter;
- })();
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 9949e5fa..0dda08d7 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -8,18 +8,19 @@
- (function() {
-   var fs = require('fs');
-   var path = require('path');
--
-   var hogan = require('hogan.js');
-
-   var hoganTemplates = require('./templates/diff2html-templates.js');
-
--  var templatesPath = path.resolve(__dirname, 'templates');
-+  var extraTemplates;
-
--  function HoganJsUtils() {
-+  function HoganJsUtils(configuration) {
-+    this.config = configuration || {};
-+    extraTemplates = this.config.templates || {};
-   }
-
--  HoganJsUtils.prototype.render = function(namespace, view, params, configuration) {
--    var template = this.template(namespace, view, configuration);
-+  HoganJsUtils.prototype.render = function(namespace, view, params) {
-+    var template = this.template(namespace, view);
-     if (template) {
-       return template.render(params);
-     }
-@@ -27,17 +28,16 @@
-     return null;
-   };
-
--  HoganJsUtils.prototype.template = function(namespace, view, configuration) {
--    var config = configuration || {};
-+  HoganJsUtils.prototype.template = function(namespace, view) {
-     var templateKey = this._templateKey(namespace, view);
-
--    return this._getTemplate(templateKey, config);
-+    return this._getTemplate(templateKey);
-   };
-
--  HoganJsUtils.prototype._getTemplate = function(templateKey, config) {
-+  HoganJsUtils.prototype._getTemplate = function(templateKey) {
-     var template;
-
--    if (!config.noCache) {
-+    if (!this.config.noCache) {
-       template = this._readFromCache(templateKey);
-     }
-
-@@ -53,6 +53,7 @@
-
-     try {
-       if (fs.readFileSync) {
-+        var templatesPath = path.resolve(__dirname, 'templates');
-         var templatePath = path.join(templatesPath, templateKey);
-         var templateContent = fs.readFileSync(templatePath + '.mustache', 'utf8');
-         template = hogan.compile(templateContent);
-@@ -66,12 +67,16 @@
-   };
-
-   HoganJsUtils.prototype._readFromCache = function(templateKey) {
--    return hoganTemplates[templateKey];
-+    return extraTemplates[templateKey] || hoganTemplates[templateKey];
-   };
-
-   HoganJsUtils.prototype._templateKey = function(namespace, view) {
-     return namespace + '-' + view;
-   };
-
--  module.exports.HoganJsUtils = new HoganJsUtils();
-+  HoganJsUtils.prototype.compile = function(templateStr) {
-+    return hogan.compile(templateStr);
-+  };
-+
-+  module.exports.HoganJsUtils = HoganJsUtils;
- })();
-diff --git a/src/html-printer.js b/src/html-printer.js
-index 585d5b66..13f83047 100644
---- a/src/html-printer.js
-+++ b/src/html-printer.js
-@@ -8,6 +8,7 @@
- (function() {
-   var LineByLinePrinter = require('./line-by-line-printer.js').LineByLinePrinter;
-   var SideBySidePrinter = require('./side-by-side-printer.js').SideBySidePrinter;
-+  var FileListPrinter = require('./file-list-printer.js').FileListPrinter;
-
-   function HtmlPrinter() {
-   }
-@@ -22,5 +23,10 @@
-     return sideBySidePrinter.generateSideBySideJsonHtml(diffFiles);
-   };
-
-+  HtmlPrinter.prototype.generateFileListSummary = function(diffJson, config) {
-+    var fileListPrinter = new FileListPrinter(config);
-+    return fileListPrinter.generateFileList(diffJson);
-+  };
-+
-   module.exports.HtmlPrinter = new HtmlPrinter();
- })();
-diff --git a/src/line-by-line-printer.js b/src/line-by-line-printer.js
-index b07eb53c..d230bedd 100644
---- a/src/line-by-line-printer.js
-+++ b/src/line-by-line-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'line-by-line';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -19,6 +20,9 @@
-
-   function LineByLinePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   LineByLinePrinter.prototype.makeFileDiffHtml = function(file, diffs) {
-diff --git a/src/side-by-side-printer.js b/src/side-by-side-printer.js
-index bbf1dc8d..5e3033b3 100644
---- a/src/side-by-side-printer.js
-+++ b/src/side-by-side-printer.js
-@@ -11,7 +11,8 @@
-   var utils = require('./utils.js').Utils;
-   var Rematch = require('./rematch.js').Rematch;
-
--  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+  var hoganUtils;
-+
-   var genericTemplatesPath = 'generic';
-   var baseTemplatesPath = 'side-by-side';
-   var iconsBaseTemplatesPath = 'icon';
-@@ -26,6 +27,9 @@
-
-   function SideBySidePrinter(config) {
-     this.config = config;
-+
-+    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
-+    hoganUtils = new HoganJsUtils(config);
-   }
-
-   SideBySidePrinter.prototype.makeDiffHtml = function(file, diffs) {
-diff --git a/test/file-list-printer-tests.js b/test/file-list-printer-tests.js
-index a502a46f..60ea3208 100644
---- a/test/file-list-printer-tests.js
-+++ b/test/file-list-printer-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
-
--var fileListPrinter = require('../src/file-list-printer.js').FileListPrinter;
-+var fileListPrinter = new (require('../src/file-list-printer.js').FileListPrinter)();
-
- describe('FileListPrinter', function() {
-   describe('generateFileList', function() {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 190bf6f8..3bb754ac 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -1,6 +1,6 @@
- var assert = require('assert');
-
--var HoganJsUtils = require('../src/hoganjs-utils.js').HoganJsUtils;
-+var HoganJsUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)();
- var diffParser = require('../src/diff-parser.js').DiffParser;
-
- describe('HoganJsUtils', function() {
-@@ -21,16 +21,28 @@ describe('HoganJsUtils', function() {
-       });
-       assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should render view without cache', function() {
-       var result = HoganJsUtils.render('generic', 'empty-diff', {
-         contentClass: 'd2h-code-line',
-         diffParser: diffParser
-       }, {noCache: true});
--      assert.equal(emptyDiffHtml + '\n', result);
-+      assert.equal(emptyDiffHtml, result);
-     });
-+
-     it('should return null if template is missing', function() {
--      var result = HoganJsUtils.render('generic', 'missing-template', {}, {noCache: true});
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)({noCache: true});
-+      var result = hoganUtils.render('generic', 'missing-template', {});
-       assert.equal(null, result);
-     });
-+
-+    it('should allow templates to be overridden', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+
-+      var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-diff --git a/test/line-by-line-tests.js b/test/line-by-line-tests.js
-index 1cd92073..8869b3df 100644
---- a/test/line-by-line-tests.js
-+++ b/test/line-by-line-tests.js
-@@ -14,7 +14,7 @@ describe('LineByLinePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
-
-       assert.equal(expected, fileHtml);
-     });
-@@ -422,7 +422,6 @@ describe('LineByLinePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                &lt;/tbody&gt;\n' +
-         '            &lt;/table&gt;\n' +
-         '        &lt;/div&gt;\n' +
-diff --git a/test/side-by-side-printer-tests.js b/test/side-by-side-printer-tests.js
-index 76625f8e..771daaa5 100644
---- a/test/side-by-side-printer-tests.js
-+++ b/test/side-by-side-printer-tests.js
-@@ -14,7 +14,7 @@ describe('SideBySidePrinter', function() {
-         '            File without changes\n' +
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
--        '&lt;/tr&gt;\n';
-+        '&lt;/tr&gt;';
-
-       assert.equal(expectedRight, fileHtml.right);
-       assert.equal(expectedLeft, fileHtml.left);
-@@ -324,7 +324,6 @@ describe('SideBySidePrinter', function() {
-         '        &lt;/div&gt;\n' +
-         '    &lt;/td&gt;\n' +
-         '&lt;/tr&gt;\n' +
--        '\n' +
-         '                    &lt;/tbody&gt;\n' +
-         '                &lt;/table&gt;\n' +
-         '            &lt;/div&gt;\n' +
-
-From f3cadb96677d0eb82fc2752dc3ffbf35ca9b5bdb Mon Sep 17 00:00:00 2001
-From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
-Date: Sat, 15 Oct 2016 13:21:22 +0100
-Subject: [PATCH 2/2] Allow uncompiled templates
-
+Fixed effects:
+            Estimate Std. Error       df t value Pr(&gt;|t|)
+(Intercept)  12.6656     0.1891 146.4092   66.98   &lt;2e-16 ***
+ses           2.3949     0.1177 158.4822   20.35   &lt;2e-16 ***
 ---
- README.md                 |  3 +++
- src/hoganjs-utils.js      |  7 +++++++
- test/hogan-cache-tests.js | 24 +++++++++++++++++++++++-
- 3 files changed, 33 insertions(+), 1 deletion(-)
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-diff --git a/README.md b/README.md
-index 132c8a28..46909f25 100644
---- a/README.md
-+++ b/README.md
-@@ -98,6 +98,9 @@ The HTML output accepts a Javascript object with configuration. Possible options
-   - `synchronisedScroll`: scroll both panes in side-by-side mode: `true` or `false`, default is `false`
-   - `matchWordsThreshold`: similarity threshold for word matching, default is 0.25
-   - `matchingMaxComparisons`: perform at most this much comparisons for line matching a block of changes, default is `2500`
-+  - `templates`: object with previously compiled templates to replace parts of the html
-+  - `rawTemplates`: object with raw not compiled templates to replace parts of the html
-+  &gt; For more information regarding the possible templates look into [src/templates](https://github.com/rtfpessoa/diff2html/tree/master/src/templates)
+Correlation of Fixed Effects:
+    (Intr)
+ses -0.046
+</code></pre></div></div> <p>Random effects 部分，给出了三个随机效应的方差：</p> <ul> <li> <p>截距随机效应 \(u_{0j}\) 的方差 \(\tau_{00}\) 为 4.7852</p> </li> <li> <p>ses斜率随机效应 \(u_{1j}\) 的方差 \(\tau_{11}\) 为 0.3983</p> </li> <li> <p>残差 \(r_{ij}\) 的方差 \(\sigma^2\) 为 36.8316</p> </li> <li> <p>随机效应相关系数相关系数 \(\rho(u_{0j}, u_{1j})\) 为 -0.11。</p> </li> </ul> <p>Fixed effects 部分，给出了两个固定效应：</p> <ul> <li> <p>截距固定效应 \(\gamma_{00}\) 为 12.6656</p> </li> <li> <p>ses斜率固定效应 \(\gamma_{10}\) 为 2.3949</p> </li> </ul> <p><strong>随机效应方差</strong> 可以通过VarCorr函数输出随机效应的方差和协方差：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>as.data.frame(VarCorr(lmm_random_coef))
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       grp        var1 var2       vcov      sdcor
+1       id (Intercept) &lt;NA&gt;  4.7851695  2.1875030
+2       id         ses &lt;NA&gt;  0.3983228  0.6311282
+3       id (Intercept)  ses -0.1558678 -0.1128990
+4 Residual        &lt;NA&gt; &lt;NA&gt; 36.8315554  6.0689007
+</code></pre></div></div> <p>其中 vcov 列为方差和协方差。结果表明，残差方差 \(\sigma^2\) 为 36.8315554，随机效应协方差阵为：</p> \[\begin{align} \mathrm{Var}\begin{bmatrix} u_{0j} \\ u_{1j} \end{bmatrix}= \begin{bmatrix} \tau_{00} &amp; \tau_{01} \\ \tau_{10} &amp; \tau_{11} \end{bmatrix}= \begin{bmatrix} 4.7851695 &amp; -0.1558678 \\ -0.1558678 &amp; 0.3983228 \end{bmatrix} \end{align}\] <p>这些方差成分可以用来计算随机效应的相关系数和各层变量的方差解释率。</p> <p><strong>随机效应的相关系数</strong> 当模型中有多个层2随机效应时，可以通过随机效应的协方差阵计算各随机效应之间的相关。例如上面的模型中包含两个层2随机效应 \(u_{0j}\) 和 \(u_{1j}\) ，他们的相关系数为：</p> \[\begin{align} \rho(u_{0j},u_{1j}) = \tau_{01}/\sqrt{\tau_{00}\tau_{11}} \end{align}\] <p>summary( ) 中直接给出了相关系数为 -0.11，使用上面的方差成分也可以算出一样的结果。考察随机效应的相关是非常重要的，如果两个随机效应具有非常高的相关，表明两个系数的学校间差异可能有共同的原因，这时可以根据理论假设将其中一个系数设置为固定来简化模型。</p> <p><strong>新纳入层1变量的方差解释率</strong> 层1加入预测变量ses后，残差方差 \(\sigma^2\) 由39.148变为36.8316，可以计算层1预测变量的方差解释率：</p> \[\begin{align} R^2_{ses} = (\sigma^2_{null}-\sigma^2_{ses})/\sigma^2_{null} \end{align}\] <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sigma2_ses &lt;-  #提取随机斜率模型的残差方差
+  as.data.frame(VarCorr(lmm_random_coef))[as.data.frame(VarCorr(lmm_random_coef))$grp == 'Residual', 'vcov']
+sigma2_null &lt;-  #提取零模型的残差方差
+  as.data.frame(VarCorr(lmm_null))[as.data.frame(VarCorr(lmm_null))$grp == 'Residual', 'vcov']
+R2 = (sigma2_null - sigma2_ses)/sigma2_null  #计算R^2
+R2
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 0.05918107
+</code></pre></div></div> <p>表明加入ses后，模型解释的方差增加了5.92%。</p> <p><strong>模型的对数似然</strong> 另一种判断新纳入变量是否有效的方法是比较模型的对数似然LL。-2LL渐进服从卡方分布，可以进行似然比卡方检验，从而得到p值来辅助判断。但需要注意：(1) 必须使用完全极大似然估计，(2) 新模型必须包含旧模型的所有变量。可以使用 anova() 函数来进行检验：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anova(lmm_random_coef,lmm_null)
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Data: df
+Models:
+lmm_null: mathach ~ 1 + (1 | id)
+lmm_random_coef: mathach ~ 1 + ses + (1 + ses | id)
+                npar   AIC   BIC logLik deviance  Chisq Df Pr(&gt;Chisq)
+lmm_null           3 47122 47142 -23558    47116
+lmm_random_coef    6 46648 46690 -23318    46636 479.34  3  &lt; 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+</code></pre></div></div> <p>表明卡方变化值为479.34，自由度变化值为3，随机斜率模型的拟合优度显著高于零模型。</p> <h2 id="全模型-以为结果的模型">全模型 (以为结果的模型)</h2> <p>在随机斜率模型中，我们设置了层1的回归方程并允许层1系数带有变异。全模型的目的是进一步解释这些变异的来源，也就是在层2加入预测变量（学校特征），使他们预测层1系数：</p> \[\begin{align} &amp; Y_{ij}(mathach) = \beta_{0j} + \beta_{1j}X_{ij}(ses) + r_{ij} \\ &amp; \beta_{0j} = \gamma_{00} + \gamma_{01}W_{j}(disclim) + u_{0j} \\ &amp; \beta_{1j} = \gamma_{10} + \gamma_{11}W_{j}(disclim) + u_{1j} \end{align}\] <p>合并模型为：</p> \[\begin{align} Y_{ij}(mathach) = \gamma_{00} + \gamma_{10}X_{ij}(ses) + \gamma_{01}W_{j}(disclim) + \gamma_{11}X_{ij}(ses)W_{j}(disclim) + u_{0j} + u_{1j}X_{ij}(ses) + r_{ij} \end{align}\] <p>包含四个固定效应：</p> <ul> <li>\(\gamma_{00}\) 是控制其他所有变量后的总截距</li> <li>\(\gamma_{01}\) 是学校纪律环境的主效应</li> <li>\(\gamma_{10}\) 是学生ses的主效应</li> <li>\(\gamma_{11}\) 是学生ses和学校纪律环境的跨层交互作用</li> </ul> <p>三个随机效应：</p> <ul> <li>\(u_{0j}\) 表示纪律环境无法解释的学校间均值差异，方差为 \(\tau_{00}\) 。</li> <li>\(u_{1j}\) 表示纪律环境无法解释的各学校间ses斜率差异，方差为 \(\tau_{11}\) 。</li> <li>\(r_{ij}\) 表示ses无法解释的学生个体差异，方差为 \(\sigma^2\) 。</li> </ul> <p>在随机斜率模型的基础上，全模型能够进一步提供：学校数学成绩均值与学校纪律环境的关系 \(\gamma_{01}\) ，ses斜率与学校纪律环境的关系 \(\gamma_{11}\) ，即跨层的交互作用。</p> <p>计算程序为：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lmm_full &lt;- lmerTest::lmer(mathach ~ 1 + ses + disclim + ses:disclim + (1 + ses|id), data = df,
+                           REML = FALSE, control = lmerControl(optimizer = 'bobyqa'))
+summary(lmm_full)
+</code></pre></div></div> <p>与随机斜率模型相比，随机部分不变，固定部分加入学校纪律环境主效应 disclim 和交互项 ses:disclim。结果为：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: mathach ~ 1 + ses + disclim + ses:disclim + (1 + ses | id)
+   Data: df
+Control: lmerControl(optimizer = "bobyqa")
 
- ## Diff2HtmlUI Helper
+     AIC      BIC   logLik deviance df.resid
+ 46590.3  46645.3 -23287.2  46574.3     7177
 
-diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
-index 0dda08d7..b2e9c275 100644
---- a/src/hoganjs-utils.js
-+++ b/src/hoganjs-utils.js
-@@ -17,6 +17,13 @@
-   function HoganJsUtils(configuration) {
-     this.config = configuration || {};
-     extraTemplates = this.config.templates || {};
-+
-+    var rawTemplates = this.config.rawTemplates || {};
-+    for (var templateName in rawTemplates) {
-+      if (rawTemplates.hasOwnProperty(templateName)) {
-+        if (!extraTemplates[templateName]) extraTemplates[templateName] = this.compile(rawTemplates[templateName]);
-+      }
-+    }
-   }
+Scaled residuals:
+    Min      1Q  Median      3Q     Max
+-3.0406 -0.7342  0.0225  0.7579  3.2767
 
-   HoganJsUtils.prototype.render = function(namespace, view, params) {
-diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
-index 3bb754ac..a34839c0 100644
---- a/test/hogan-cache-tests.js
-+++ b/test/hogan-cache-tests.js
-@@ -36,7 +36,7 @@ describe('HoganJsUtils', function() {
-       assert.equal(null, result);
-     });
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr
+ id       (Intercept)  3.6695  1.9156
+          ses          0.1566  0.3957   0.44
+ Residual             36.7963  6.0660
+Number of obs: 7185, groups:  id, 160
 
--    it('should allow templates to be overridden', function() {
-+    it('should allow templates to be overridden with compiled templates', function() {
-       var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
+Fixed effects:
+            Estimate Std. Error       df t value Pr(&gt;|t|)
+(Intercept)  12.6606     0.1698 147.7548  74.569  &lt; 2e-16 ***
+ses           2.4112     0.1100 157.4166  21.928  &lt; 2e-16 ***
+disclim      -1.1275     0.1757 151.2843  -6.418 1.68e-09 ***
+ses:disclim   0.5711     0.1174 180.9257   4.865 2.48e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-       var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
-@@ -44,5 +44,27 @@ describe('HoganJsUtils', function() {
-       var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-       assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-     });
-+
-+    it('should allow templates to be overridden with uncompiled templates', function() {
-+      var emptyDiffTemplate = '&lt;p&gt;&lt;/p&gt;';
-+
-+      var config = {rawTemplates: {'generic-empty-diff': emptyDiffTemplate}};
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-+
-+    it('should allow templates to be overridden giving priority to compiled templates', function() {
-+      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
-+      var emptyDiffTemplateUncompiled = '&lt;p&gt;Not used!&lt;/p&gt;';
-+
-+      var config = {
-+        templates: {'generic-empty-diff': emptyDiffTemplate},
-+        rawTemplates: {'generic-empty-diff': emptyDiffTemplateUncompiled}
-+      };
-+      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
-+      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
-+      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
-+    });
-   });
- });
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is how you can display code diffs]]></summary></entry><entry><title type="html">a post with advanced image components</title><link href="https://pineapple-3456.github.io/blog/2024/advanced-images/" rel="alternate" type="text/html" title="a post with advanced image components"/><published>2024-01-27T11:46:00+00:00</published><updated>2024-01-27T11:46:00+00:00</updated><id>https://pineapple-3456.github.io/blog/2024/advanced-images</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2024/advanced-images/"><![CDATA[<p>This is an example post with advanced image components.</p> <h2 id="image-slider">Image Slider</h2> <p>This is a simple image slider. It uses the <a href="https://swiperjs.com/">Swiper</a> library. Check the <a href="https://swiperjs.com/demos">examples page</a> for more information of what you can achieve with it.</p> <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true"> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/9-480.webp 480w,/assets/img/9-800.webp 800w,/assets/img/9-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/9.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/7-480.webp 480w,/assets/img/7-800.webp 800w,/assets/img/7-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/7.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/8-480.webp 480w,/assets/img/8-800.webp 800w,/assets/img/8-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/8.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/10-480.webp 480w,/assets/img/10-800.webp 800w,/assets/img/10-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/10.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"/> </picture> </figure> </swiper-slide> <swiper-slide> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/12-480.webp 480w,/assets/img/12-800.webp 800w,/assets/img/12-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/12.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"/> </picture> </figure> </swiper-slide> </swiper-container> <h2 id="image-comparison-slider">Image Comparison Slider</h2> <p>This is a simple image comparison slider. It uses the <a href="https://img-comparison-slider.sneas.io/">img-comparison-slider</a> library. Check the <a href="https://img-comparison-slider.sneas.io/examples.html">examples page</a> for more information of what you can achieve with it.</p> <img-comparison-slider> <figure slot="first"> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic-480.webp 480w,/assets/img/prof_pic-800.webp 800w,/assets/img/prof_pic-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/prof_pic.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"/> </picture> </figure> <figure slot="second"> <picture> <source class="responsive-img-srcset" srcset="/assets/img/prof_pic_color-480.webp 480w,/assets/img/prof_pic_color-800.webp 800w,/assets/img/prof_pic_color-1400.webp 1400w," type="image/webp" sizes="95vw"/> <img src="/assets/img/prof_pic_color.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"/> </picture> </figure> </img-comparison-slider>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="images"/><summary type="html"><![CDATA[this is what advanced image components could look like]]></summary></entry></feed>
+Correlation of Fixed Effects:
+            (Intr) ses   disclm
+ses         0.128
+disclim     0.043  0.088
+ses:disclim 0.091  0.050 0.114
+</code></pre></div></div> <p>Random effects 部分，给出了三个随机效应的方差：</p> <ul> <li> <p>截距随机效应 \(u_{0j}\) 的方差 \(\tau_{00}\) 为 3.6695</p> </li> <li> <p>ses斜率随机效应 \(u_{1j}\) 的方差 \(\tau_{11}\) 为 0.1566</p> </li> <li> <p>残差随机效应 \(r_{ij}\) 的方差 \(\sigma^2\) 为 36.7963</p> </li> <li> <p>随机效应相关系数相关系数 \(\rho(u_{0j}, u_{1j})\) 为 0.44。</p> </li> </ul> <p>Fixed effects 部分，给出了四个固定效应：</p> <ul> <li> <p>截距效应 \(\gamma_{00}\) 为 12.6606</p> </li> <li> <p>学校纪律环境主效应 \(\gamma_{01}\) 为 -1.1275</p> </li> <li> <p>学生ses主效应 \(\gamma_{10}\) 为 2.4112</p> </li> <li> <p>学生ses和学校纪律环境的跨层交互作用 \(\gamma_{11}\) 为 0.5711</p> </li> </ul> <p><strong>随机效应方差</strong> 同样通过VarCorr( ) 函数输出随机效应的方差和协方差：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>as.data.frame(VarCorr(lmm_full))
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       grp        var1 var2       vcov     sdcor
+1       id (Intercept) &lt;NA&gt;  3.6695224 1.9155998
+2       id         ses &lt;NA&gt;  0.1566169 0.3957485
+3       id (Intercept)  ses  0.3327761 0.4389632
+4 Residual        &lt;NA&gt; &lt;NA&gt; 36.7962906 6.0659946
+</code></pre></div></div> <p>残差方差 \(\sigma^2\) 为 36.7962906，随机效应协方差阵为：</p> \[\begin{align} \mathrm{Var}\begin{bmatrix} u_{0j} \\ u_{1j} \end{bmatrix}= \begin{bmatrix} \tau_{00} &amp; \tau_{01} \\ \tau_{10} &amp; \tau_{11} \end{bmatrix}= \begin{bmatrix} 3.6695224 &amp; 0.3327761 \\ 0.3327761 &amp; 0.1566169 \end{bmatrix} \end{align}\] <p><strong>层2变量的方差解释率</strong> 层2加入截距和斜率预测变量，解释了一部分学校间截距和斜率差异，可以计算这一方差解释率。与层1相似，层2截距模型方差解释率为 \((\tau_{00(ses)} - \tau_{00(full)}) / \tau_{00(ses)}\) ，层2斜率模型的方差解释率为 \((\tau_{11(ses)} - \tau_{11(full)}) / \tau_{11(ses)}\) 。</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 学校纪律环境对学校截距差异的方差解释率
+tau00_full &lt;-  #全模型层2截距模型残差方差
+  as.data.frame(VarCorr(lmm_full))[as.data.frame(VarCorr(lmm_full))$var1 == '(Intercept)', 'vcov'][1]
+tau00_ses &lt;-  #随机斜率模型层2截距模型残差方差
+  as.data.frame(VarCorr(lmm_random_coef))[as.data.frame(VarCorr(lmm_random_coef))$var1 == '(Intercept)', 'vcov'][1]
+R2 = (tau00_ses - tau00_full)/tau00_ses  #计算R^2
+R2
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 0.2331468
+</code></pre></div></div> <p>表明学校纪律环境解释了 23.31% 的学校间截距差异。</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 学校纪律环境对学校ses斜率差异的方差解释率
+tau11_full &lt;-  #全模型层2斜率模型残差方差
+  as.data.frame(VarCorr(lmm_full))[as.data.frame(VarCorr(lmm_full))$var1 == 'ses', 'vcov'][1]
+tau11_ses &lt;-  #随机斜率模型层2斜率模型残差方差
+  as.data.frame(VarCorr(lmm_random_coef))[as.data.frame(VarCorr(lmm_random_coef))$var1 == 'ses', 'vcov'][1]
+R2 = (tau11_ses - tau11_full)/tau11_ses  #计算R^2
+R2
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 0.6068091
+</code></pre></div></div> <p>表明学校纪律环境解释了 60.68% 的学校间ses斜率差异。</p> <p><strong>模型比较</strong> 使用似然比卡方检验来比较全模型和随机斜率模型：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anova(lmm_full, lmm_random_coef)
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Data: df
+Models:
+lmm_random_coef: mathach ~ 1 + ses + (1 + ses | id)
+lmm_full: mathach ~ 1 + ses + disclim + ses:disclim + (1 + ses | id)
+                npar   AIC   BIC logLik deviance  Chisq Df Pr(&gt;Chisq)
+lmm_random_coef    6 46648 46690 -23318    46636
+lmm_full           8 46590 46645 -23287    46574 62.165  2   3.17e-14 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+</code></pre></div></div> <p>表明全模型的拟合优度显著高于随机斜率模型。</p> <h1 id="lmer的参数设置">lmer的参数设置</h1> <p><strong>公式</strong> lme4的公式是根据合并模型设置的，分为固定和随机两个部分。例如在上面的全模型中，固定部分为：</p> \[\gamma_{00} + \gamma_{10}X_{ij}(ses) + \gamma_{01}W_{j}(disclim) + \gamma_{11}X_{ij}(ses)W_{j}(disclim)\] <p>固定部分语法与 lm( ) 一致，设置为mathach ~ ses + disclim + ses:disclim，或 mathach ~ ses*disclim。</p> <p>随机部分为：</p> \[u_{0j} + u_{1j}X_{ij}(ses) + r_{ij}\] <p>随机部分左右两侧用竖线隔开，左侧是需要设置随机效应的参数，右侧是组的编码。例如在以上的例子中， \(u_{0j}\) 和 \(u_{1j}\) 分别为截距和斜率的随机效应随着学校变化，残差 \(r_{ij}\) 不需要设置，因此随机部分设置为 (1 + ses|id) 。表明截距和ses的斜率在学校间变化。截距一般可以省略掉，变为 (ses|id) 。如果希望截距固定，则将1改成0，变为 (0 + ses|id) 。</p> <p><strong>估计方法</strong> 线性混合模型一般使用完全极大似然法(ML)和受限极大似然法(REML)进行估计。REML假定固定效应的结构是正确的，能够为随机效应提供更准确的估计，相反，ML能够为固定效应提供能准确的估计。多数软件默认使用REML估计，但具体使用哪一种取决于研究目的。在使用对数似然进行模型比较时，如果新模型在旧模型基础上加入了新的变量，则两个模型必须使用ML估计。如果新模型只在旧模型1的基础上加入了新的随机效应，那么两个模型都应该使用REML估计，这种方法适合于评估随机效应设置的合理性。可以通过 REML = TRUE 或 FALSE 来指定估计方法。</p> <p><strong>畸形拟合</strong> 有时模型拟合后会显示警告 ”boundary (singular) fit: see help(‘isSingular’)“，表明在允许的最大迭代次数后结果没有收敛，这时的结果是不可信的。此时首选的解决方法是更改优化算法。可以在 lmer 中添加参数 control = lmerControl(optimizer = “选择的优化器”) 。以上的例子中全部使用了bobyqa优化算法。可以使用 afex 包的 allFit( ) 函数来帮助选择优化算法，以上面的全模型为例：</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>library(afex)
+lmm_full &lt;- lme4::lmer(mathach ~ ses + disclim + ses:disclim + (1 + ses|id),data = df)
+allFit(lmm_full)
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bobyqa : [OK]
+Nelder_Mead : [OK]
+nlminbwrap : [OK]
+nloptwrap.NLOPT_LN_NELDERMEAD : [OK]
+nloptwrap.NLOPT_LN_BOBYQA : boundary (singular) fit: see help('isSingular')
+[OK]
+original model:
+mathach ~ ses + disclim + ses:disclim + (1 + ses | id)
+data:  df
+optimizers (5): bobyqa, Nelder_Mead, nlminbwrap, nloptwrap.NLOPT_LN_NELDERMEAD, nloptwrap.NLO...
+differences in negative log-likelihoods:
+max= 0.331 ; std dev= 0.148
+</code></pre></div></div> <p>结果表明，nloptwrap 导致了收敛警告，而其他的优化器都是可用的。另一种方法是增加迭代次数直到收敛，例如 control = lmerControl(optCtrl = list(maxfun = 1e9)) 。但有时畸形拟合说明模型过于复杂，可以适当删除随机效应，或者强制随机效应之间相关为0 。强制随机效应的方法是分别设置每个随机效应，例如以上的例子里，随机部分可以改为 (1|id) + (0 + ses|id) 。</p> <h1 id="层1自变量对中问题">层1自变量对中问题</h1> <p>对中是指将自变量减去其均值，使均值变为0。这是为了使截距变得有意义，自变量均值对应的回归预测值为因变量均值，而对中后截距就是因变量的均值。截距的意义在混合模型中是一个重要问题，因为截距的意义决定了层2截距随机效应和截距预测变量的意义，因此对中是一个必要的步骤。对中有两种方式：以总均值对中和以组均值对中。本例中的自变量是预先进行过标准化的，可以看做以总均值对中。</p> <h2 id="对截距估计的影响">对截距估计的影响</h2> <p>不同对中方式得到的截距含义是不同的。</p> <p><strong>以总均值对中</strong> 以总均值对中后，层1模型变为:</p> \[\begin{align} Y_{ij} = \beta_{0j} + \beta_{1j}(X_{ij}-\bar{X}_{..}) + r_{ij} \end{align}\] <p>将学校内样本均值 \(X = \bar{X}_{.j}\) 和 \(Y = \bar{Y}_{.j}\) 带入能够得到:</p> \[\begin{align} \beta_{0j} = \bar{Y}_{.j} - \beta_{1j}(\bar{X}_{.j}-\bar{X}_{..}) \end{align}\] <p>是控制了自变量后每个学校的调整均值。如果希望控制个体水平的一些变量来估计截距，那么最好以总均值对中，实际研究中一般是这种情况，但前提是不存在构成效应。</p> <p><strong>以组均值对中</strong> 以组均值对中后，层1模型变为：</p> \[\begin{align} Y_{ij} = \beta_{0j} + \beta_{1j}(X_{ij}-\bar{X}_{.j}) + r_{ij} \end{align}\] <p>将学校内样本均值 \(X = \bar{X}_{.j}\) 和 \(Y = \bar{Y}_{.j}\) 带入能够得到:</p> \[\begin{align} \beta_{0j} = \bar{Y}_{.j} \end{align}\] <p>这样就忽略了自变量的影响，是每个学校的未调整均值。也就是说，层2截距模型不受层1自变量的影响。</p> <h2 id="对斜率估计的影响">对斜率估计的影响</h2> <p>我们希望层1斜率是个体水平斜率的估计，但有时不必然如此，对中方式会影响层1斜率的估计。</p> <p><strong>构成效应</strong> 当把自变量分为组均值 \(\bar{X}_{.j}\) 和个体差异 \((X_{ij}-\bar{X}_{.j})\) 两个部分时， \(\bar{X}_{.j}\) 的效应 \(\beta_b\) 和 \((X_{ij}-\bar{X}_{.j})\) 的效应 \(\beta_w\) 有时存在差异，构成效应为 \(\beta_c = \beta_b -\beta_w\) 。</p> <p>当存在构成效应时，以总均值对中得到的 \(\beta_{1j}\) 不是个体水平的斜率，而是 \(\beta_b\) 和 \(\beta_w\) 混合而成的效应，难以解释。需要在层2截距模型中加入组均值作为协变量：</p> \[\begin{align} &amp; Y_{ij} = \beta_{0j} + \beta_{1j}(X_{ij}-\bar{X}_{..}) + r_{ij} \\ &amp; \beta_{0j} = \gamma_{00} + \gamma_{01}\bar{X}_{.j} + u_{0j} \\ &amp; \beta_{1j} = \gamma_{10} \end{align}\] <p>此时有:</p> \[\begin{align} &amp; \beta_{c} = \gamma_{01} \\ &amp; \beta_{w} = \gamma_{10} \\ &amp; \beta_{b} = \gamma_{10} + \gamma_{01}\\ \end{align}\] <p>而组均值对中可以直接得到个体水平的斜率估计：</p> \[\begin{align} &amp; Y_{ij} = \beta_{0j} + \beta_{1j}(X_{ij}-\bar{X}_{.j}) + r_{ij} \\ &amp; \beta_{0j} = \gamma_{00} + \gamma_{01}\bar{X}_{.j} + u_{0j} \\ &amp; \beta_{1j} = \gamma_{10} \end{align}\] <p>此时有:</p> \[\begin{align} &amp; \beta_{b} = \gamma_{01} \\ &amp; \beta_{w} = \gamma_{10} \\ &amp; \beta_{c} = \gamma_{01} - \gamma_{10}\\ \end{align}\] <h1 id="参考资料">参考资料：</h1> <ol> <li> <p>S. W. Raudenbush, A. S. Bryk. <em>分层线性模型：应用与数据分析方法</em>. 社会科学文献出版社.</p> </li> <li> <p>刘红云. <em>高级心理统计</em>. 中国人民大学出版社.</p> </li> <li> <p>Field, A., Miles, J., &amp; Field, Z. <em>Discovering statistics using R</em>. SAGE Publications.</p> </li> <li> <p>谢宇. <em>回归分析</em>. 社会科学文献出版社.</p> </li> <li> <p>Brown, V. A. (2021). <em>An Introduction to Linear Mixed-Effects Modeling in R</em>. Advances in Methods and Practices in Psychological Science. </p> </li> </ol>]]></content><author><name></name></author><category term="统计"/><summary type="html"><![CDATA[线性混合模型的建立和检验]]></summary></entry><entry><title type="html">信度的定义与测量标准误</title><link href="https://pineapple-3456.github.io/blog/2023/%E4%BF%A1%E5%BA%A6%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%B5%8B%E9%87%8F%E6%A0%87%E5%87%86%E8%AF%AF/" rel="alternate" type="text/html" title="信度的定义与测量标准误"/><published>2023-10-20T00:00:00+00:00</published><updated>2023-10-20T00:00:00+00:00</updated><id>https://pineapple-3456.github.io/blog/2023/%E4%BF%A1%E5%BA%A6%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%B5%8B%E9%87%8F%E6%A0%87%E5%87%86%E8%AF%AF</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2023/%E4%BF%A1%E5%BA%A6%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%B5%8B%E9%87%8F%E6%A0%87%E5%87%86%E8%AF%AF/"><![CDATA[<h2 id="信度的定义">信度的定义</h2> <ol> <li>信度是一个被测团体真分数的变异数与实得分数的变异数之比： \(r_{xx} = SS_T/SS_X\)</li> <li>信度是一个被试团体的真分数与实得分数相关系数的平方： \(r_{xx} = \rho^2_{xT}\)</li> <li>信度是一个测验与它任意一个平行测验实得分数的相关系数： \(r_{xx} = \rho_{xx'}\)</li> </ol> <p>定义1实际上就是线性模型的拟合优度，即真分数可解释的变异占总变异的比重，回归分析中称作 \(R^2\)，具体可以参考上一篇blog。首先我们证明定义1、2等价，这与上一篇blog几乎一致。</p> \[\begin{align} \rho^2_{xT} = \left [ \frac{Cov(T, X)}{\sigma(T)\sigma(X)} \right ]^2 \end{align}\] <p>单独拿出分子中协方差对应的离差乘积和：</p> \[\begin{align} &amp; \sum(t_i-\bar{t})(x_i-\bar{x}) \\ &amp; = \sum[(t_i-\bar{t})(x_i-t_i+t_i-\bar{x})] \\ &amp; = \sum[(t_i-\bar{t})(x_i-t_i)+(t_i-\bar{t})(t_i-\bar{x})] \\ &amp; = \sum[(t_i-\bar{t})e_i+(t_i-\bar{t})(t_i-\bar{x})] \end{align}\] <p>根据经典测量理论CTT的基本假设2， \(Cov(T, E)=0\)。而且理想情况下随机误差 \(E\) 的均值是0，因此， \(\sum(t_i-\bar{t})e_i=0\)。其次，根据CTT的基本假设1，真分数是实得分数的期望值，因此同一被测团体中二者的均值相等，即 \(\bar{t} = \bar{x}\)。所以可以继续推导：</p> \[\begin{align} &amp; \sum[(t_i-\bar{t})e_i+(t_i-\bar{t})(t_i-\bar{x})] \\ &amp; = \sum[(t_i-\bar{t})(t_i-\bar{t})]\\ &amp; = \sum(t_i-\bar{t})^2 \end{align}\] <p>代回相关系数的公式：</p> \[\begin{align} \rho^2_{xT} &amp; = \left [ \frac{Cov(T, X)}{\sigma(T)\sigma(X)} \right ]^2 \\ &amp; = \left [\frac{\sum(t_i-\bar{t})^2}{\sqrt{\sum(t_i-\bar{t})^2\sum(x_i-\bar{x})^2}} \right ]^2\\ &amp; = \frac{\sum(t_i-\bar{t})^2\sum(t_i-\bar{t})^2}{\sum(t_i-\bar{t})^2\sum(x_i-\bar{x})^2}\\ &amp; = \frac{\sum(t_i-\bar{t})^2}{\sum(x_i-\bar{x})^2}\\ &amp; = \frac{SS_T}{SS_X} \end{align}\] <p>因此，真分数与实得分数的相关系数平方等于真分数变异占总变异的比重。</p> <p>接下来是定义3。测验 \(X\) 的平行测验记为 \(X'\)，根据平行测验的定义， \(T=T'\)， \(\sigma_{E}=\sigma_{E'}\)：</p> \[\begin{align} \rho_{xx'} &amp; = \frac{Cov(X, X')}{\sigma(X)\sigma(X')} \\ &amp; = \frac{\sum(x_i - \bar{x})(x_i' - \bar{x})}{\sqrt{SS_{T}+SS_{E}} \sqrt{SS_{T'}+SS_{E'}}} \\ &amp; = \frac{\sum(t_i + e_i - \bar{x})(t_i + e_i' - \bar{x})}{(\sqrt{SS_{T}+SS_{E}})^2} \\ &amp; = \frac{\sum(t_i^2+t_ie_i'-t_i\bar{x}+e_it_i+e_ie_i'-e_i\bar{x}-\bar{x}t_i-\bar{x}e_i'+\bar{x}^2)}{SS_X} \end{align}\] <p>根据CTT假设3， \(Cov(E, E')=0\)，所以 \(\sum e_ie_i'=0\)：</p> \[\begin{align} &amp; \frac{\sum(t_i^2-2t_i\bar{x}+\bar{x}^2+t_ie_i-\bar{x}e_i+t_ie_i'-\bar{x}e_i')}{SS_X} \\ &amp; = \frac{\sum(t_i-\bar{x})^2+\sum(t_i-\bar{x})e_i+\sum(t_i-\bar{x})e_i'}{SS_X} \\ &amp; = \frac{\sum(t_i-\bar{x})^2}{SS_X} \\ &amp; = \frac{SS_T}{SS_X} \end{align}\] <p>因此，两平行测验相关系数等于真分数变异占总变异的比重。定义3是实际操作中进行信度计算的理论基础，重测信度、复本信度以及分半信度都与这一思路有关。</p> <hr/> <h2 id="测量标准误">测量标准误</h2> <p>戴海崎教材中给出的测量标准误公式是：</p> \[\begin{align} \sigma_X\sqrt{1-r_{xx}} \end{align}\] <p>很容易得到：</p> \[\begin{align} &amp;\sigma_X\sqrt{1-r_{xx}}\\ &amp; = \sigma_X\sqrt{1-\frac{SS_T}{SS_X}}\\ &amp; = \sigma_X\sqrt{\frac{SS_X-SS_T}{SS_X}} \end{align}\] <p>根据CTT假设，有 \(SS_X = SS_T + SS_E\)。所以可以得到：</p> \[\begin{align} &amp;\sigma_X\sqrt{\frac{SS_X-SS_T}{SS_X}}\\ &amp; = \sigma_X\sqrt{\frac{SS_E}{SS_X}}\\ &amp; = \sigma_X\sqrt{\frac{\sigma^2_E}{\sigma^2_X}}\\ &amp; = \sigma_E \end{align}\] <p>也就是误差的标准差。</p> <hr/>]]></content><author><name></name></author><category term="统计"/><summary type="html"><![CDATA[信度的定义与测量标准误]]></summary></entry><entry><title type="html">线性模型中R²、r、η²、f²、f、F的关系</title><link href="https://pineapple-3456.github.io/blog/2023/%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B%E4%B8%ADR-r-%CE%B7-f-f-F%E7%9A%84%E5%85%B3%E7%B3%BB/" rel="alternate" type="text/html" title="线性模型中R²、r、η²、f²、f、F的关系"/><published>2023-09-16T16:40:16+00:00</published><updated>2023-09-16T16:40:16+00:00</updated><id>https://pineapple-3456.github.io/blog/2023/%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B%E4%B8%ADR%C2%B2%E3%80%81r%E3%80%81%CE%B7%C2%B2%E3%80%81f%C2%B2%E3%80%81f%E3%80%81F%E7%9A%84%E5%85%B3%E7%B3%BB</id><content type="html" xml:base="https://pineapple-3456.github.io/blog/2023/%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B%E4%B8%ADR-r-%CE%B7-f-f-F%E7%9A%84%E5%85%B3%E7%B3%BB/"><![CDATA[<p>决定系数 \(R^2\) 原本的含义是拟合优度。下文先讨论含截距的普通最小二乘回归。</p> <p>具体来讲，在回归分析中，我们将全部观测值 \(y_i\) 偏离均值 \(\bar{y}\) 的离差平方和记作SST(Sum of Squares Total)。其中包含了观测值 \(y_i\) 偏离回归估计值 \(\hat{y_i}\) 离差平方和SSE(Sum of Squares Error)，以及估计值 \(\hat{y_i}\) 偏离平均值 \(\bar{y}\) 的离差平方和SSR(Sum of Squares Regression)。</p> \[\begin{eqnarray} SST &amp; = &amp; \sum_{i=1}^{n} (y_i-\bar{y})^2\\ &amp; = &amp; \sum_{i=1}^{n} [(\hat{y_i}-\bar{y})+(y_i-\hat{y_i})]^2\\ &amp; = &amp; \sum_{i=1}^{n} [(\hat{y_i}-\bar{y})^2+(y_i-\hat{y_i})^2+2(\hat{y_i}-\bar{y})(y_i-\hat{y_i})]\\ \end{eqnarray}\] <p>在含截距的最小二乘回归中，残差与拟合值不相关，因此交叉项的和为0。所以：</p> \[\begin{eqnarray} \sum_{i=1}^{n} [(\hat{y_i}-\bar{y})^2+(y_i-\hat{y_i})^2+2(\hat{y_i}-\bar{y})(y_i-\hat{y_i})] = \sum_{i=1}^{n} (\hat{y_i}-\bar{y})^2+ \sum_{i=1}^{n} (y_i-\hat{y_i})^2 = SSR + SSE \end{eqnarray}\] <p>SSE代表回归方程无法解释的变异，SSR代表回归方程可以解释的变异。SSR/SST，即可解释变异占总变异的比例，代表了回归方程的拟合优度，即 \(R^2\)。在含截距的一元回归中，决定系数 \(R^2\) 实际上就是样本皮尔逊相关系数 \(r\) 的平方。根据 \(r\) 的计算公式很容易得到：</p> \[\begin{eqnarray} r^2 &amp; = &amp; \left[ \frac{Cov(X, Y)}{\sigma(x)\sigma(y)}\right]^2\\ &amp; = &amp; \frac{\left[ \sum_{i=1}^{n}(y_i-\bar{y})(x_i-\bar{x}) \right]^2}{\sum_{i=1}^{n}(y_i-\bar{y})^2\sum_{i=1}^{n}(x_i-\bar{x})^2} \end{eqnarray}\] <p>单独拿出分子:</p> \[\begin{eqnarray} &amp;&amp; [\sum_{i=1}^{n}(y_i-\bar{y})(x_i-\bar{x})]^2\\ &amp; = &amp; [\sum_{i=1}^{n}[(y_i-\hat{y_i})+(\hat{y_i}-\bar{y})](x_i-\bar{x})]^2\\ &amp; = &amp; [\sum_{i=1}^{n}(y_i-\hat{y_i})(x_i-\bar{x})+ \sum_{i=1}^{n}(\hat{y_i}-\bar{y})(x_i-\bar{x})]^2 \end{eqnarray}\] <p>单独拿出括号中的左半部分 \(\sum_{i=1}^{n}(y_i-\hat{y_i})(x_i-\bar{x})\)，我们知道回归的基本表达是 \(\hat{y_i} = b_0 + b_1 x_i\)，代入得到：</p> \[\begin{eqnarray} &amp;&amp; \sum_{i=1}^{n}(y_i-\hat{y_i})(x_i-\bar{x})\\ &amp; = &amp; \frac{1}{b_1}\sum_{i=1}^{n}(y_i-\hat{y_i})[(b_1 x_i+b_0)-(b_1\bar{x}+b_0)]\\ &amp; = &amp; \frac{1}{b_1}\sum_{i=1}^{n}(y_i-\hat{y_i})(\hat{y_i}-\bar{y}) \end{eqnarray}\] <p>与前面的平方和分解同理，根据最小二乘残差与解释变量不相关的性质，括号中的左半部分可以直接消掉，只剩下 \([\sum_{i=1}^{n}(\hat{y_i}-\bar{y})(x_i-\bar{x})]^2\)。然后同理将 \(\hat{y_i} = b_0 + b_1x_i\) 代入:</p> \[\begin{eqnarray} &amp;&amp; [\sum_{i=1}^{n}(\hat{y_i}-\bar{y})(x_i-\bar{x})]^2\\ &amp; = &amp; \sum_{i=1}^{n}(\hat{y_i}-\bar{y})(x_i-\bar{x}) \sum_{i=1}^{n}(\hat{y_i}-\bar{y})(x_i-\bar{x})\\ &amp; = &amp; \frac{1}{b_1} \sum_{i=1}^{n} [(\hat{y_i}-\bar{y})]^2 b_1\sum_{i=1}^{n}[(x_i-\bar{x})]^2 \\ &amp; = &amp; \sum_{i=1}^{n} (\hat{y_i}-\bar{y})^2 \sum_{i=1}^{n} (x_i-\bar{x})^2 \end{eqnarray}\] <p>那么 \(r^2\) 的表达式变为：</p> \[\begin{eqnarray} &amp;&amp; \frac{\sum_{i=1}^{n} (\hat{y_i}-\bar{y})^2 \sum_{i=1}^{n} (x_i-\bar{x})^2}{\sum_{i=1}^{n}(y_i-\bar{y})^2\sum_{i=1}^{n}(x_i-\bar{x})^2}\\ &amp; = &amp; \frac{\sum_{i=1}^{n} (\hat{y_i}-\bar{y})^2}{\sum_{i=1}^{n}(y_i-\bar{y})^2}\\ &amp; = &amp; \frac{SSR}{SST}\\ &amp; = &amp; R^2 \end{eqnarray}\] <p>在单因素方差分析中，用组别虚拟变量建立等价的回归模型，\(R^2\) 也是方差分析中常用的效应量 \(\eta^2\)。方差分析是解释变量为分类变量的线性模型，上面证明中的SSR对应方差分析中的组间离差平方和，SSE对应组内离差平方和。只有两组时，这里的 \(R^2\) 才可以直接写成组别与结果之间的 \(r^2\)。</p> <p>有了 \(R^2\) 后，我们就可以计算整体模型的 \(f^2\)，常见的公式是：</p> \[\begin{eqnarray} f^2 = \frac{R^2}{1-R^2} \end{eqnarray}\] <p>加上根号就可以得到 \(f\) 的公式。习惯上把方差分析中的 \(f=0.1, 0.25, 0.4\) 分别算作小、中、大效应，而回归中的 \(f^2\) 常用0.02，0.15和0.35划分小、中、大效应。两套都是针对不同分析语境的经验划分，不能直接平方后互相替代。用Gpower算样本量时，应根据要检验的效应、显著性水平、目标检验力和模型确定参数，不能根据算出来的样本量是否看起来合理来选择效应量。不过争论这个问题意义不大，效应量的划分本来就比较武断。比较合理的方式是根据过去类似研究确定有意义的效应量，再估计所需的样本量；如果样本量受现实条件限制，也可以计算在给定显著性水平和检验力下最小能检测到多大的效应。</p> <p>我们进一步推导。因为</p> \[\begin{eqnarray} R^2 = \frac{SSR}{SST} = \frac{SST-SSE}{SST} = 1-\frac{SSE}{SST} \end{eqnarray}\] <p>所以\(f^2\) 的含义实际上是：</p> \[\begin{eqnarray} f^2 = \frac{\frac{SSR}{SST}}{1-(1-\frac{SSE}{SST})} = \frac{SSR}{SSE} \end{eqnarray}\] <p>所以 \(f^2\) 也是一种拟合优度的指标，含义是回归模型可解释变异与不可解释变异的比值。</p> <p>如果要检验回归模型整体是否具有解释力，就需要引出 \(F\)。\(F\) 是检验统计量，它在 \(f^2\) 的基础上考虑了自由度。在经典线性模型的假设下，可以根据 \(F\) 分布进行假设检验:</p> \[\begin{eqnarray} F = \frac{SSR/1}{SSE/(n-2)} \end{eqnarray}\] <p>可以看出 \(F\) 就是在 \(f^2\) 的基础上，分子分母同时除以自由度。上面的式子是一元回归的情况，多元回归时，分子自由度为 \(k\) ，分母自由度为 \(n-k-1\) ， \(k\) 是不包括截距的预测变量个数。可见，\(F\) 不仅与效应大小有关，也与样本量和预测变量的个数有关，因此不能直接把 \(F\) 当作效应量。</p>]]></content><author><name></name></author><category term="统计"/><summary type="html"><![CDATA[这些指标可以通过回归模型的解释变异联系起来。]]></summary></entry></feed>
