@@ -15,6 +15,8 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "requirements.txt"
+      - "bin/render_cv.py"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -42,6 +44,8 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "requirements.txt"
+      - "bin/render_cv.py"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -94,7 +98,8 @@ jobs:
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
+          pip3 install -r requirements.txt
+          python3 bin/render_cv.py
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹

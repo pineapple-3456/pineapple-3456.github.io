@@ -5,3 +5,12 @@ design:
     size: a4
     show_footer: false
     show_top_note: false
+  templates:
+    education_entry:
+      degree_column: null
+      main_column: "**INSTITUTION**, AREA\nSTUDYTYPE\nCOURSES\nSUMMARY\nHIGHLIGHTS"
+    normal_entry:
+      main_column: "**NAME**\nLEVEL\nKEYWORDS\nISSUER\nSUMMARY\nREFERENCE\nHIGHLIGHTS"
+    publication_entry:
+      main_column: "**PDF_TITLE**\nSUMMARY\nAUTHORS\nPUBLISHER"
+      date_and_location_column: "DATE"
