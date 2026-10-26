@@ -1,14 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - pineapple-3456
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - pineapple-3456/pineapple-3456.github.io
+  - pineapple-3456/LTO-cultural-value-of-ming-dynasty
+  - pineapple-3456/chinese-historical-wars
+  - pineapple-3456/histwords

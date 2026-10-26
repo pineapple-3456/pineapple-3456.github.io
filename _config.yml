@@ -237,8 +237,12 @@ exclude:
   - _pages/about_einstein.md
   - _pages/projects.md
   - _pages/teaching.md
+  - _pages/profiles.md
+  - _pages/cv.md
+  - _pages/books.md
   - _projects/
   - _teachings/
+  - _books/
   - purgecss.config.js
   - README.md
   - readme_preview/
@@ -350,8 +354,8 @@ display_categories: [] # these categories will be displayed on the front page of
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Tan]
+  first_name: [Haoyuan, H.]
 
   style: apa
   locale: en
