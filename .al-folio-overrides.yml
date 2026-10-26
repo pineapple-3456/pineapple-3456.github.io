@@ -1,0 +1,10 @@
+---
+version: 1
+overrides:
+  _includes/plugins/al_math_styles.liquid:
+    owner: al_folio_core
+    gem_version: 1.0.15
+    upstream_path: _includes/plugins/al_math_styles.liquid
+    upstream_sha256: 1f94abd87ad54e65b822ba089122b201e310336daa50ea3a8eab13473c56bd15
+    local_sha256: c23c0bc8556dff8c324aaffc8a37bcc07e062ba76eabc369570a25a0fd38fcc0
+    acknowledged_at: "2026-10-26"
