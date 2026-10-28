@@ -1,0 +1,10 @@
+name: war-explorer
+title:
+username: pineapple-3456
+account: pineapple-3456
+server: connect.posit.cloud
+hostUrl: https://api.connect.posit.cloud/v1
+appId: 01a1805a-d9af-22ef-9336-4d2916d594d3
+bundleId:
+url: https://connect.posit.cloud/pineapple-3456/content/01a1805a-d9af-22ef-9336-4d2916d594d3
+version: 1
